@@ -327,7 +327,7 @@ $(document).ready(function() {
     if (language == null || language == "") {
         language = "zh-tw";
     }
-    $('#'+language)[0].classList.add("language-select");
+    $('#' + language)[0].classList.add("language-select");
     $('.lang').each(function(index, element) {
         $(this).text(arrLang[language][$(this).attr('key')]);
     });
