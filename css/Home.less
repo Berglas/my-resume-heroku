@@ -1,3 +1,5 @@
+@dark-color: rgb(47, 51, 58);
+
 ::selection {
     background: rgb(167, 98, 133);
     color: rgb(242, 242, 242);
@@ -8,6 +10,17 @@
     color: rgb(242, 242, 242);
 }
 
+// ::-webkit-scrollbar {
+//     width: 8px;
+// }
+// ::-webkit-scrollbar-track {
+//     background: rgb(167, 98, 133);
+//     width: 12px;
+// }
+// ::-webkit-scrollbar-thumb {
+//     background: @dark-color;
+//     width: 12px;
+// }
 * {
     word-break: break-all;
 }
@@ -20,7 +33,7 @@ a[href^="tel"] {
 body {
     font-family: 'Microsoft JhengHei';
     background-image: url(../image/agsquare.png);
-    color: rgb(47, 51, 58);
+    color: @dark-color
 }
 
 .title_style h1 {
@@ -81,12 +94,21 @@ body {
     border: 1.5px solid rgba(44, 44, 44, 1) !important;
 }
 
-.myicon {
-    color:rgb(210, 212, 213);
+.hamburger-menu {
+    display: inline-block;
+    cursor: pointer;
+    width: 30px;
+    padding: 5px 0px;
+    float: right;
 }
 
-.myicon:hover {
-    color: rgba(210, 212, 213,0.8);
+.icon-bar {
+    background: rgb(66, 66, 66);
+    display: block;
+    height: 4px;
+    width: 30px;
+    margin-top: 5px;
+    border-radius: 2px;
 }
 
 .button {
@@ -116,27 +138,27 @@ body {
     border-radius: 50%;
 }
 
-.Home-Item:nth-child(1) {
+.home-item:nth-child(1) {
     background-image: url(../image/PROFILE.png);
     background-size: cover;
 }
 
-.Home-Item:nth-child(2) {
+.home-item:nth-child(2) {
     background-image: url(../image/SKILLS.jpg);
     background-size: cover;
 }
 
-.Home-Item:nth-child(3) {
+.home-item:nth-child(3) {
     background-image: url(../image/PORTFOLIO.png);
     background-size: cover;
 }
 
-.Home-Item:nth-child(4) {
+.home-item:nth-child(4) {
     background-image: url(../image/CONTACT.jpg);
     background-size: cover;
 }
 
-.Home-Item:hover {
+.home-item:hover {
     cursor: pointer;
     filter: grayscale(0%);
 }
@@ -146,57 +168,77 @@ body {
     font-size: 30px;
 }
 
-.icon-2x {
-    width: 30px;
-    height: 30px;
+.remove-bootstrap-a {
+    background: none;
+    color: #444 !important;
+    width: 0%;
+}
+
+.remove-bootstrap-a:hover {
+    color: #222;
+}
+
+.remove-bootstrap-h3 {
+    color: #444;
+}
+
+.remove-bootstrap-ol {
+    li {
+        border: 1px solid #444;
+    }
+}
+
+.carousel-indicators {
+    .active {
+        background: #444;
+    }
 }
 
 @-webkit-keyframes cycle {
     0% {
-        border-left: 1.5px solid #444;
+        border-left: 1.5px solid @dark-color;
     }
 
     25% {
-        border-left: 1.5px solid #444;
-        border-top: 1.5px solid #444;
+        border-left: 1.5px solid @dark-color;
+        border-top: 1.5px solid @dark-color;
     }
     50% {
-        border-left: 1.5px solid #444;
-        border-top: 1.5px solid #444;
-        border-right: 1.5px solid #444;
+        border-left: 1.5px solid @dark-color;
+        border-top: 1.5px solid @dark-color;
+        border-right: 1.5px solid @dark-color;
     }
 
     100% {
-        border-left: 1.5px solid #444;
-        border-top: 1.5px solid #444;
-        border-right: 1.5px solid #444;
-        border-bottom: 1.5px solid #444;
+        border-left: 1.5px solid @dark-color;
+        border-top: 1.5px solid @dark-color;
+        border-right: 1.5px solid @dark-color;
+        border-bottom: 1.5px solid @dark-color;
     }
 }
 
 @keyframes cycle {
     0% {
-        border-left: 1.5px solid #444;
+        border-left: 1.5px solid @dark-color;
     }
 
     25% {
-        border-left: 1.5px solid #444;
-        border-top: 1.5px solid #444;
+        border-left: 1.5px solid @dark-color;
+        border-top: 1.5px solid @dark-color;
     }
     50% {
-        border-left: 1.5px solid #444;
-        border-top: 1.5px solid #444;
-        border-right: 1.5px solid #444;
+        border-left: 1.5px solid @dark-color;
+        border-top: 1.5px solid @dark-color;
+        border-right: 1.5px solid @dark-color;
     }
 
     100% {
-        border-left: 1.5px solid #444;
-        border-top: 1.5px solid #444;
-        border-right: 1.5px solid #444;
-        border-bottom: 1.5px solid #444;
+        border-left: 1.5px solid @dark-color;
+        border-top: 1.5px solid @dark-color;
+        border-right: 1.5px solid @dark-color;
+        border-bottom: 1.5px solid @dark-color;
     }
 }
-
 
 
 
@@ -232,18 +274,6 @@ body {
         font-size: 20px;
     }
 
-    .hamburger-menu {
-        display: none;
-    }
-
-    .icon-bar {
-        display: none;
-    }
-
-    .Mobile-Menu {
-        display: none;
-    }
-
     .Menu-Box {
         display: block;
         position: fixed;
@@ -267,6 +297,7 @@ body {
         height: 100%;
         padding: 5px;
         width: 100%;
+        text-decoration: none;
     }
 
     .Menu-Box a:hover {
@@ -280,64 +311,49 @@ body {
     }
 
     .web-title {
-        padding-top: 20%;
-        height: 40%;
+        padding-top: 15%;
+        height: 60%;
         width: 100%;
         margin: 0 auto;
         text-align: center;
-        display: block;
     }
 
-    .Home-Item-Box {
-        height: 40%;
+    .home-item-box {
         width: 100%;
         padding: 0% 20%;
+        position: absolute;
     }
 
-    .Home-Item {
-        filter: grayscale(70%);
+    .home-item {
         float: left;
-        height: 50%;
         width: 25%;
+        filter: grayscale(70%);
         -webkit-clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
         clip-path: polygon(75% 0, 100% 50%, 75% 100%, 25% 100%, 0 50%, 25% 0);
     }
 
-    .Home-Item a {
+    .home-item a {
         width: 100%;
         height: 100%;
         background: rgba(255, 255, 255, 0);
     }
 
-    .Home-Item h2 {
-        position: absolute;
+    .home-item h2 {
         background: rgba(44, 44, 44, 0.2);
         color: rgb(255, 255, 255);
-        font-size: 34px;
+        font-size: 32px;
         text-align: center;
-        padding: 25px 0px;
         width: 100%;
-        top: calc(50% - 40px);
+        height: 100%;
+        padding: 20% 0%;
     }
 
-    .Home-Item:nth-child(1) {
-        margin-top: 100px;
+    .home-item:nth-child(2) {
+        margin-top: 50px;
     }
-
-
-    .Home-Item:nth-child(2) {
-        margin-top: 150px;
+    .home-item:nth-child(4) {
+        margin-top: 50px;
     }
-
-    .Home-Item:nth-child(3) {
-        margin-top: 100px;
-    }
-
-
-    .Home-Item:nth-child(4) {
-        margin-top: 150px;
-    }
-
     .profile-title {
         margin: 10% 0;
         height: 60%;
@@ -347,13 +363,11 @@ body {
         padding-left: 10%;
     }
 
-
     .profile-title h1 {
-        color: #444;
+        color: @dark-color;
     }
 
     .profile-info {
-        filter: grayscale(50%);
         background-image: url(../image/RESUME.jpg);
         margin: 7.5% 0;
         height: 70%;
@@ -381,6 +395,7 @@ body {
 
 
     .skill-content {
+        padding: 50px 50px 50px 10%;
         height: 100%;
         float: left;
         width: 85%;
@@ -388,27 +403,18 @@ body {
 
     .skill-title {
         padding-top: 10%;
-        height: 90%;
+        height: 100%;
         width: 15%;
-        color: #fff;
         float: right;
     }
 
-    .skill-title h1 {
-        color: #444;
-    }
 
     .skills-box {
-        box-shadow: 0px 0px 24px 18px rgb(214, 214, 214);
-        -webkit-box-shadow: 0px 0px 24px 18px rgb(214, 214, 214);
-        -moz-box-shadow: 0px 0px 24px 18px rgb(214, 214, 214);
-        -o-box-shadow: 0px 0px 24px 18px rgb(214, 214, 214);
+        border: 1px solid #444;
         float: left;
-        height: calc(100% - 50px);
-        width: calc(100% - 138px);
+        height: 100%;
+        width: 100%;
         display: none;
-        margin: 25px;
-        padding: 0 25px;
     }
 
     .skill-item {
@@ -422,27 +428,6 @@ body {
         p {
             font-size: 16px;
         }
-    }
-
-    .skill-img {
-        -webkit-clip-path: polygon(40% 0%, 100% 0%, 60% 100%, 0% 100%);
-        clip-path: polygon(40% 0%, 100% 0%, 60% 100%, 0% 100%);
-        width: 40%;
-        height: 100%;
-        float: right;
-        display: block;
-    }
-
-    .skill-img:after {
-        background-color: rgb(44, 44, 44);
-        display: block;
-        opacity: 0.5;
-        content: "";
-        height: 100%;
-        left: 0px;
-        position: relative;
-        top: 0px;
-        width: 100%;
     }
 
     .left-button {
@@ -566,6 +551,13 @@ body {
 
 
 
+
+
+
+
+
+
+
 /*Mobile*/
 
 @media screen and (min-width: 0px) and (max-width: 900px) {
@@ -595,24 +587,6 @@ body {
 
     h3 {
         font-size: 12px;
-    }
-
-    .hamburger-menu {
-        background: none;
-        display: inline-block;
-        cursor: pointer;
-        width: 30px;
-        padding: 5px;
-        float: right;
-    }
-
-    .icon-bar {
-        background: rgb(66, 66, 66);
-        display: block;
-        height: 4px;
-        width: 30px;
-        margin-top: 5px;
-        border-radius: 2px;
     }
 
     .wrapper {
@@ -679,33 +653,31 @@ body {
         display: none;
     }
 
-    .Home-Item-Box {
+    .home-item-box {
         width: 100%;
         height: 100%;
     }
 
-    .Home-Item {
+    .home-item {
         position: relative;
-        filter: grayscale(70%);
         height: 25%;
         width: 100%;
     }
 
-    .Home-Item a {
+    .home-item a {
         width: 100%;
         height: 100%;
         background: rgba(255, 255, 255, 0);
     }
 
-    .Home-Item h2 {
-        position: absolute;
+    .home-item h2 {
+        position: relative;
         background: rgba(44, 44, 44, 0.2);
         color: rgb(255, 255, 255);
         font-size: 34px;
         text-align: center;
-        padding: 25px 0px;
+        padding: 12.5% 0px;
         width: 100%;
-        top: calc(50% - 40px);
     }
 
     .profile-title {
@@ -714,12 +686,11 @@ body {
     }
 
     .profile-title h1 {
-        color: #444;
+        color: @dark-color;
     }
 
 
     .profile-info {
-        filter: grayscale(50%);
         background-image: url(../image/RESUME.jpg);
         background-size: 100%;
         height: 30%;
@@ -736,25 +707,17 @@ body {
     }
 
     .skill-content {
-        height: 90%;
+        height: 100%;
         width: 100%;
     }
 
     .skill-title {
         height: 10%;
         width: 100%;
-        color: #fff;
-    }
-
-    .skill-title h1 {
-        color: #444;
     }
 
     .skills-box {
-        box-shadow: 0px 0px 24px 10px rgb(214, 214, 214);
-        -webkit-box-shadow: 0px 0px 24px 10px rgb(214, 214, 214);
-        -moz-box-shadow: 0px 0px 24px 10px rgb(214, 214, 214);
-        -o-box-shadow: 0px 0px 24px 10px rgb(214, 214, 214);
+        border: 1px solid #444;
         float: left;
         height: calc(100% - 10px);
         width: calc(100% - 98px);
@@ -770,24 +733,6 @@ body {
         h3 {
             margin-top: 20px;
         }
-    }
-
-    .skill-img {
-        top: 10px;
-        position: absolute;
-        z-index: 9999;
-    }
-
-    .skill-img:after {
-        background-color: rgb(44, 44, 44);
-        display: block;
-        opacity: 0.5;
-        content: "";
-        height: 100%;
-        left: 0px;
-        position: relative;
-        top: 0px;
-        width: 100%;
     }
 
     .left-button {
@@ -896,3 +841,16 @@ body {
         }
     }
 }
+
+// 顏色遮罩
+//     .aaa:after {
+//         background-color: rgb(44, 44, 44);
+//         display: block;
+//         opacity: 0.5;
+//         content: "";
+//         height: 100%;
+//         left: 0px;
+//         position: relative;
+//         top: 0px;
+//         width: 100%;
+//     }

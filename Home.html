@@ -6,26 +6,28 @@
     <link rel="icon" type="image/png" href="image/rcion.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/breeze.css" />
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="css/hover-animation.css" />
-    <link rel="stylesheet" type="text/css" href="css/shared.css" />
-    <link rel="stylesheet/less" type="text/css" href="css/Home.less" />
-    <script type="text/javascript" src="js/Home.js"></script>
-    <script type="text/javascript" src="js/translate.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/shared.css?{{.Version}}" />
+    <link rel="stylesheet/less" type="text/css" href="css/Home.less?{{.Version}}" />
+    <script type="text/javascript" src="js/Home.js?{{.Version}}"></script>
+    <script type="text/javascript" src="js/translate.js?{{.Version}}"></script>
     <script type="text/javascript" src="js/less.min.js"></script>
 </head>
 
 <body>
     <div class='Menu-Box'>
-        <div id='openMenu' class='hamburger-menu'>
+        <div id='openMenu' class='hamburger-menu Mobile-display'>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </div>
         <nav id='Menu-content'>
             <ul>
-                <li data-menuanchor="page0" class='Mobile-display'><a id='close-button'><i class="fa fa-times fa-2x" aria-hidden="true"></i></a></li>
+                <li data-menuanchor="page0" class='Mobile-display'><a id='close-button' onclick="closeMenu()"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a></li>
                 <li data-menuanchor="page0"><a class='lang' key="Itme_HOME" href="#page0"></a></li>
                 <li data-menuanchor="page1"><a class='lang' key="Itme_PROFILE" href="#page1"></a></li>
                 <li data-menuanchor="page2"><a class='lang' key="Itme_SKILLS" href="#page2"></a></li>
@@ -59,30 +61,29 @@
                 <div class="border_right"></div>
             </div>
         </div>
-        <div class='Home-Item-Box'>
-            <div class='Home-Item'>
+        <div class='home-item-box'>
+            <div class='home-item'>
                 <a href="#page1">
                     <h2 class='lang' key="Itme_PROFILE"></h2>
                 </a>
             </div>
-            <div class='Home-Item'>
+            <div class='home-item'>
                 <a href="#page2">
                     <h2 class='lang' key="Itme_SKILLS"></h2>
                 </a>
             </div>
-            <div class='Home-Item'>
+            <div class='home-item'>
                 <a href="#page3">
                     <h2 class='lang' key="Itme_PORTFOLIO"></h2>
                 </a>
             </div>
-            <div class='Home-Item'>
+            <div class='home-item'>
                 <a href="#page4">
                     <h2 class='lang' key="Itme_CONTACT"></h2>
                 </a>
             </div>
         </div>
     </section>
-    <!-- Page PROFILE -->
     <section id='page1'>
         <div class='profile-title'>
             <h1 class='lang' key="Itme_PROFILE"></h1>
@@ -109,35 +110,121 @@
             <p class='lang' key='RESUME_Experience_4'></p>
         </div>
     </section>
-    <!-- Page RESUME -->
     <section id='page2'>
         <div class='skill-title'>
             <h1 class='lang' key="Itme_SKILLS"></h1>
         </div>
         <div class='skill-content'>
-            <div class='fa fa-arrow-circle-left fa-3x left-button' onclick="delayedUpdatelist(-1)"></div>
-            <div class='skills-box rounditem' style="display: block;">
-                <div class='skill-item'>
-                    <h2 class='lang' key='RESUME_skills_front_end'></h2>
-                    <h3>HTML5：</h3>
-                    <p class='lang' key='RESUME_HTML_content_1'></p>
-                    <p class='lang' key='RESUME_HTML_content_2'></p>
-                    <p class='lang' key='RESUME_HTML_content_3'></p>
-                    <h3>CSS3：</h3>
-                    <p class='lang' key='RESUME_CSS_content_1'></p>
+            <div id="mycarousel" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators remove-bootstrap-ol"></ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <p class='lang' key='RESUME_HTML_content_1'></p>
+                        <p class='lang' key='RESUME_HTML_content_2'></p>
+                        <p class='lang' key='RESUME_HTML_content_3'></p>
+                        <div class="carousel-caption remove-bootstrap-h3">
+                            <h3>HTML5</h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <p class='lang' key='RESUME_CSS_content_1'></p>
                     <p class='lang' key='RESUME_CSS_content_2'></p>
                     <p class='lang' key='RESUME_CSS_content_3'></p>
-                    <h3>JavaScript：</h3>
-                    <p class='lang' key='RESUME_JS_content_1'></p>
+                        <div class="carousel-caption remove-bootstrap-h3">
+                            <h3>CSS3</h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <p class='lang' key='RESUME_JS_content_1'></p>
                     <p class='lang' key='RESUME_JS_content_2'></p>
                     <p class='lang' key='RESUME_JS_content_3'></p>
+                        <div class="carousel-caption remove-bootstrap-h3">
+                            <h3>JavaScript</h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption remove-bootstrap-h3">
+                            <h3>廣告輪播4</h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption remove-bootstrap-h3">
+                            <h3>廣告輪播4</h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption remove-bootstrap-h3">
+                            <h3>廣告輪播4</h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption remove-bootstrap-h3">
+                            <h3>廣告輪播4</h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption remove-bootstrap-h3">
+                            <h3>廣告輪播4</h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption remove-bootstrap-h3">
+                            <h3>廣告輪播4</h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption remove-bootstrap-h3">
+                            <h3>廣告輪播4</h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption remove-bootstrap-h3">
+                            <h3>廣告輪播4</h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption remove-bootstrap-h3">
+                            <h3>廣告輪播4</h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption remove-bootstrap-h3">
+                            <h3>廣告輪播4</h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption remove-bootstrap-h3">
+                            <h3>廣告輪播4</h3>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="carousel-caption remove-bootstrap-h3">
+                            <h3>廣告輪播4</h3>
+                        </div>
+                    </div>
+                </div>
+                <a class="remove-bootstrap-a left carousel-control" href="#mycarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control remove-bootstrap-a" href="#mycarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+            <!-- <div class='skills-box' style="display: block;">
+                <div class='skill-item'>
+                    <h2 class='lang' key='RESUME_skills_front_end'></h2>
+                    <h3></h3>
+                    
+                    <h3></h3>
+                    
+                    <h3></h3>
+                    
                     <h3 class='lang' key='RESUME_summary'></h3>
                     <p class='lang' key='RESUME_front_end_summary_1'></p>
                     <p class='lang' key='RESUME_front_end_summary_2'></p>
                 </div>
-                <div class='skill-img' style="background-image: url(image/front-end.jpg);"></div>
             </div>
-            <div class='skills-box rounditem'>
+            <div class='skills-box'>
                 <div class='skill-item'>
                     <h2 class='lang' key='RESUME_skills_back_end'></h2>
                     <h3>C#：</h3>
@@ -153,9 +240,8 @@
                     <p class='lang' key='RESUME_back_end_summary_1'></p>
                     <p class='lang' key='RESUME_back_end_summary_2'></p>
                 </div>
-                <div class='skill-img' style="background-image: url(image/back-end.jpg);"></div>
             </div>
-            <div class='skills-box rounditem'>
+            <div class='skills-box'>
                 <div class='skill-item'>
                     <h2 class='lang' key='RESUME_skills_others'></h2>
                     <h3>DataBase：</h3>
@@ -171,12 +257,9 @@
                     <p class='lang' key='RESUME_others_summary_2'></p>
                     <p class='lang' key='RESUME_others_summary_3'></p>
                 </div>
-                <div class='skill-img' style="background-image: url(image/others-skill.jpg);"></div>
-            </div>
-            <div class='fa fa-arrow-circle-right fa-3x right-button' onclick="delayedUpdatelist(1)"></div>
+            </div> -->
         </div>
     </section>
-    <!-- Page PORTFOLIO -->
     <section id='page3'>
         <div class='protfolio-title'>
             <h1 class='lang' key="Itme_PORTFOLIO"></h1>
@@ -277,7 +360,6 @@
             </ul>
         </div>
     </section>
-    <!-- Page CONTACT -->
     <section id='page4'>
         <div class='communicate-box'>
             <h1 class='lang' key='Itme_CONTACT'></h1>
@@ -306,22 +388,6 @@
     </section>
 </body>
 <script type="text/javascript">
-document.getElementById("openMenu").addEventListener("click", function(e) {
-    document.body.classList.add("openMenu");
-    e.stopPropagation(); // 讓 click 事件停止冒泡 
-    document.addEventListener("click", function(e) {
-        // 如果點擊側邊欄以外的區域，就關閉側邊欄 
-        if (!e.target.closest("#Menu-content")) {
-            document.body.classList.remove("openMenu");
-        }
-    });
-
-    $('#close-button').on("click", function(e) {
-
-        document.body.classList.remove("openMenu");
-    });
-});
-
 $(document).ready(function() {
     var language = getCookie("language");
     if (language == null || language == "") {
@@ -335,13 +401,15 @@ $(document).ready(function() {
 
 $(function() {
     $('a[href*=#]:not([href=#])').click(function() {
-        var target = $(this.hash);
-        $('html, body').animate({
-            scrollTop: target.offset().top
+        if ($(this)[0].hash != "#mycarousel") {
+            var target = $(this.hash);
+            $('html, body').animate({
+                scrollTop: target.offset().top
 
-        }, 300);
+            }, 400);
 
-        return false;
+            return false;
+        };
     });
 });
 
@@ -354,34 +422,6 @@ $(function() {
         this.classList.add("language-select");
     });
 });
-
-//設置cookie
-//name:cookie名稱、value:cookie值、deadline:cookie有效時間(單位:小時)
-function setCookie(name, value, deadline) {
-    var exp = new Date();
-    exp.setTime(exp.getTime() + deadline * 60 * 60 * 1000);
-    document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
-}
-
-//讀取cookie
-//name:cookie名稱
-function getCookie(name) {
-    var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
-
-    if (arr = document.cookie.match(reg))
-        return unescape(arr[2]);
-    else
-        return null;
-}
-
-//删除cookies
-function deleteCookie(name) {
-    var exp = new Date();
-    exp.setTime(exp.getTime() - 1);
-    var cval = getCookie(name);
-    if (cval != null)
-        document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString();
-}
 </script>
 
 </html>
