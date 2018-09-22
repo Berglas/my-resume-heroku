@@ -30,7 +30,7 @@ function deleteCookie(name) {
 //定義輪播
 $(function() {
     var $item = $('.carousel .item');
-    var $wHeight = $(window).height() - 140;
+    var $wHeight = $(window).height() - 40;
     $item.height($wHeight);
 
     $('.carousel img').each(function() {
@@ -69,7 +69,7 @@ $(function() {
 
     //縮放視窗調整視窗高度
     $(window).on('resize', function() {
-        var $wHeight = $(window).height() - 140;
+        var $wHeight = $(window).height() - 40;
         $item.height($wHeight);
     });
 
