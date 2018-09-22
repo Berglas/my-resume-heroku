@@ -31,7 +31,7 @@ function deleteCookie(name) {
 $(function() {
     var $item = $('.carousel .item');
     var $wHeight = $(window).height() - 140;
-                $item.height($wHeight); 
+    $item.height($wHeight);
 
     $('.carousel img').each(function() {
         var $src = $(this).attr('src');
@@ -69,7 +69,7 @@ $(function() {
 
     //縮放視窗調整視窗高度
     $(window).on('resize', function() {
-        $wHeight = $(window).height();
+        var $wHeight = $(window).height() - 140;
         $item.height($wHeight);
     });
 

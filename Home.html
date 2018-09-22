@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" href="image/rcion.png" />
+    <link rel="icon" type="image/png" href="image/logo.png" sizes="16x16" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -11,21 +11,21 @@
     <link rel="stylesheet" type="text/css" href="css/breeze.css" />
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="css/hover-animation.css" />
-    <link rel="stylesheet" type="text/css" href="css/shared.css?{{.Version}}" />
-    <link rel="stylesheet/less" type="text/css" href="css/Home.less?{{.Version}}" />
-    <script type="text/javascript" src="js/Home.js?{{.Version}}"></script>
-    <script type="text/javascript" src="js/translate.js?{{.Version}}"></script>
+    <link rel="stylesheet" type="text/css" href="css/shared.css" />
+    <link rel="stylesheet/less" type="text/css" href="css/Home.less" />
+    <script type="text/javascript" src="js/Home.js"></script>
+    <script type="text/javascript" src="js/translate.js"></script>
     <script type="text/javascript" src="js/less.min.js"></script>
 </head>
 
 <body>
-    <div class='Menu-Box'>
+    <div class='menu-box'>
         <div id='openMenu' class='hamburger-menu Mobile-display'>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </div>
-        <nav id='Menu-content'>
+        <nav id='menu-content'>
             <ul>
                 <li data-menuanchor="page0" class='Mobile-display'><a id='close-button' onclick="closeMenu()"><i class="fa fa-times fa-2x" aria-hidden="true"></i></a></li>
                 <li data-menuanchor="page0"><a class='lang' key="Itme_HOME" href="#page0"></a></li>
@@ -118,88 +118,52 @@
             <div id="mycarousel" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators remove-bootstrap-ol"></ol>
                 <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <p class='lang' key='RESUME_HTML_content_1'></p>
-                        <p class='lang' key='RESUME_HTML_content_2'></p>
-                        <p class='lang' key='RESUME_HTML_content_3'></p>
+                    <div class="item active" style='padding:0 5%;'>
+                        <div class='skills-img' style='background: url(image/front-end.jpg);'>
+                        </div>
+                        <div class='skills-box'>
+                            <p class='lang' key='SKILLS_fontend_content_1'></p>
+                            <p class='lang' key='SKILLS_fontend_content_2'></p>
+                            <br>
+                            <p class='lang' key='SKILLS_fontend_content_3'></p>
+                            <p class='lang' key='SKILLS_fontend_content_4'></p>
+                            <p class='lang' key='SKILLS_fontend_content_5'></p>
+                            <p class='lang' key='SKILLS_fontend_content_6'></p>
+                        </div>
                         <div class="carousel-caption remove-bootstrap-h3">
-                            <h3>HTML5</h3>
+                            <h3 class='lang' key='SKILLS_frontend'></h3>
                         </div>
                     </div>
-                    <div class="item">
-                        <p class='lang' key='RESUME_CSS_content_1'></p>
-                    <p class='lang' key='RESUME_CSS_content_2'></p>
-                    <p class='lang' key='RESUME_CSS_content_3'></p>
+                    <div class="item" style='padding:0 5%;'>
+                        <div class='skills-img' style='background: url(image/back-end.jpg);'>
+                        </div>
+                        <div class='skills-box'>
+                            <p class='lang' key='SKILLS_backend_content_1'></p>
+                            <p class='lang' key='SKILLS_backend_content_2'></p>
+                            <br>
+                            <p class='lang' key='SKILLS_backend_content_3'></p>
+                            <p class='lang' key='SKILLS_backend_content_4'></p>
+                            <p class='lang' key='SKILLS_backend_content_5'></p>
+                            <p class='lang' key='SKILLS_backend_content_6'></p>
+                        </div>
                         <div class="carousel-caption remove-bootstrap-h3">
-                            <h3>CSS3</h3>
+                            <h3 class='lang' key='SKILLS_backend'></h3>
                         </div>
                     </div>
-                    <div class="item">
-                        <p class='lang' key='RESUME_JS_content_1'></p>
-                    <p class='lang' key='RESUME_JS_content_2'></p>
-                    <p class='lang' key='RESUME_JS_content_3'></p>
-                        <div class="carousel-caption remove-bootstrap-h3">
-                            <h3>JavaScript</h3>
+                    <div class="item" style='padding:0 5%;'>
+                        <div class='skills-img' style='background: url(image/web-designing.jpg);'>
                         </div>
-                    </div>
-                    <div class="item">
-                        <div class="carousel-caption remove-bootstrap-h3">
-                            <h3>廣告輪播4</h3>
+                        <div class='skills-box'>
+                            <p class='lang' key='SKILLS_others_content_1'></p>
+                            <p class='lang' key='SKILLS_others_content_2'></p>
+                            <br>
+                            <p class='lang' key='SKILLS_others_content_3'></p>
+                            <p class='lang' key='SKILLS_others_content_4'></p>
+                            <p class='lang' key='SKILLS_others_content_5'></p>
+                            <p class='lang' key='SKILLS_others_content_6'></p>
                         </div>
-                    </div>
-                    <div class="item">
                         <div class="carousel-caption remove-bootstrap-h3">
-                            <h3>廣告輪播4</h3>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="carousel-caption remove-bootstrap-h3">
-                            <h3>廣告輪播4</h3>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="carousel-caption remove-bootstrap-h3">
-                            <h3>廣告輪播4</h3>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="carousel-caption remove-bootstrap-h3">
-                            <h3>廣告輪播4</h3>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="carousel-caption remove-bootstrap-h3">
-                            <h3>廣告輪播4</h3>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="carousel-caption remove-bootstrap-h3">
-                            <h3>廣告輪播4</h3>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="carousel-caption remove-bootstrap-h3">
-                            <h3>廣告輪播4</h3>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="carousel-caption remove-bootstrap-h3">
-                            <h3>廣告輪播4</h3>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="carousel-caption remove-bootstrap-h3">
-                            <h3>廣告輪播4</h3>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="carousel-caption remove-bootstrap-h3">
-                            <h3>廣告輪播4</h3>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="carousel-caption remove-bootstrap-h3">
-                            <h3>廣告輪播4</h3>
+                            <h3 class='lang' key='SKILLS_others'>JavaScript</h3>
                         </div>
                     </div>
                 </div>
@@ -210,61 +174,13 @@
                     <span class="glyphicon glyphicon-chevron-right"></span>
                 </a>
             </div>
-            <!-- <div class='skills-box' style="display: block;">
-                <div class='skill-item'>
-                    <h2 class='lang' key='RESUME_skills_front_end'></h2>
-                    <h3></h3>
-                    
-                    <h3></h3>
-                    
-                    <h3></h3>
-                    
-                    <h3 class='lang' key='RESUME_summary'></h3>
-                    <p class='lang' key='RESUME_front_end_summary_1'></p>
-                    <p class='lang' key='RESUME_front_end_summary_2'></p>
-                </div>
-            </div>
-            <div class='skills-box'>
-                <div class='skill-item'>
-                    <h2 class='lang' key='RESUME_skills_back_end'></h2>
-                    <h3>C#：</h3>
-                    <p class='lang' key='RESUME_C#_content_1'></p>
-                    <p class='lang' key='RESUME_C#_content_2'></p>
-                    <p class='lang' key='RESUME_C#_content_3'></p>
-                    <h3>Golang：</h3>
-                    <p class='lang' key='RESUME_Golang_content_1'></p>
-                    <p class='lang' key='RESUME_Golang_content_2'></p>
-                    <h3>Java：</h3>
-                    <p class='lang' key='RESUME_Java_content'></p>
-                    <h3 class='lang' key='RESUME_summary'></h3>
-                    <p class='lang' key='RESUME_back_end_summary_1'></p>
-                    <p class='lang' key='RESUME_back_end_summary_2'></p>
-                </div>
-            </div>
-            <div class='skills-box'>
-                <div class='skill-item'>
-                    <h2 class='lang' key='RESUME_skills_others'></h2>
-                    <h3>DataBase：</h3>
-                    <p class='lang' key='RESUME_DB_content_1'></p>
-                    <p class='lang' key='RESUME_DB_content_2'></p>
-                    <h3>Git</h3>
-                    <p class='lang' key='RESUME_Git_content'></p>
-                    <h3>UX：</h3>
-                    <p class='lang' key='RESUME_UX_content_1'></p>
-                    <p class='lang' key='RESUME_UX_content_2'></p>
-                    <h3 class='lang' key='RESUME_summary'></h3>
-                    <p class='lang' key='RESUME_others_summary_1'></p>
-                    <p class='lang' key='RESUME_others_summary_2'></p>
-                    <p class='lang' key='RESUME_others_summary_3'></p>
-                </div>
-            </div> -->
         </div>
     </section>
     <section id='page3'>
         <div class='protfolio-title'>
             <h1 class='lang' key="Itme_PORTFOLIO"></h1>
         </div>
-        <div class='protfolio-Item-Box'>
+        <div class='protfolio-item-box'>
             <ul>
                 <li>
                     <div class="ih-item circle effect13 from_left_and_right">
