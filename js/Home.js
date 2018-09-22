@@ -30,8 +30,11 @@ function deleteCookie(name) {
 //定義輪播
 $(function() {
     var $item = $('.carousel .item');
-    var $wHeight = $(window).height() - 40;
-    $item.height($wHeight);
+    var wHeight = $(window).height() - 40;
+    if ($(window).width() > 900) {
+        wHeight = $(window).height() - 140;
+    }
+    $item.height(wHeight);
 
     $('.carousel img').each(function() {
         var $src = $(this).attr('src');
@@ -69,8 +72,11 @@ $(function() {
 
     //縮放視窗調整視窗高度
     $(window).on('resize', function() {
-        var $wHeight = $(window).height() - 40;
-        $item.height($wHeight);
+        var wHeight = $(window).height() - 40;
+        if ($(window).width() > 900) {
+            wHeight = $(window).height() - 140;
+        }
+        $item.height(wHeight);
     });
 
     //輪播秒數與滑入停止
