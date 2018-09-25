@@ -1,0 +1,151 @@
+﻿* {
+	-webkit-box-sizing: border-box;
+ 	-moz-box-sizing: border-box;
+  	box-sizing: border-box;
+}
+
+.myPagination {
+    display: inline-block;
+    padding: 0;
+    margin: 10px;
+}
+
+.myPagination li {
+    float: left;
+    display: inline;
+}
+
+.myPagination li a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.myPagination li a.active {
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+}
+
+.myPagination li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+.myTable th,
+.myTable tr,
+.myTable td {
+    border: 1px solid rgb(240, 240, 240);
+    cursor: default;
+}
+
+.myTable,
+.myTable th,
+.myTable td {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+.myTable th,
+.myTable td {
+    padding: 5px 20px;
+    white-space: nowrap;
+}
+
+.myTable tr:nth-child(1) {
+    font-weight: bold;
+}
+
+.myTable tr:nth-child(even) {
+    background: rgb(245, 245, 245);
+}
+
+.myTable tr:nth-child(odd) {
+    /*background: rgba(240, 240, 240,0.1);*/
+}
+
+.table-select {
+    background: rgb(229, 217, 72) !important;
+    color: rgb(0, 0, 0) !important;
+}
+
+.myWindows {
+    background-color: rgba(240, 240, 240,0.9);
+    color: rgb(44, 44, 44);
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    overflow: auto;
+    display: none;
+    border-radius: 5px;
+    border: 2px solid rgba(180, 180, 180, 0.5);
+    padding:10px;
+}
+
+
+.close-icon {
+    width: 32px;
+    height: 32px;
+    background-color: none;
+    position: absolute;
+    top: 0;
+    left: calc(100% - 40px);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    cursor: pointer;
+    z-index: 99;
+}
+
+.close-icon:before {
+    background-color: rgb(66, 66, 66);
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 4px;
+    border-radius: 2px;
+    top: 12px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    transform: rotate(45deg);
+    left: 0px;
+}
+
+.close-icon:after {
+    background-color: rgb(66, 66, 66);
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 4px;
+    border-radius: 2px;
+    top: 12px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    right: 0px;
+}
+
+.dark-style {
+    background-color: rgba(66, 66, 66,0.95);
+    color: rgb(240,240,240);
+}
+
+.dark-style .close-icon:before,
+.dark-style .close-icon:after {
+    background-color: rgb(240, 240, 240);
+}
+
+
+.lock-back:after {
+    background-color: rgb(44, 44, 44);
+    display: block;
+    opacity: 0.5;
+    content: "";
+    height: 100%;
+    left: 0px;
+    position: relative;
+    top: 0px;
+    width: 100%;
+}

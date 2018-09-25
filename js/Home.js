@@ -102,3 +102,24 @@ $(function() {
 function closeMenu() {
     $('body')[0].classList.remove("openMenu");
 }
+
+function showSkill(position) {
+    $('#w h3').each(function(e) {
+        $('#w h3')[0].setAttribute("key", "SKILLS_" + position);
+    })
+
+    $('#w p').each(function(e) {
+        $('#w p')[e].setAttribute("key", "SKILLS_" + position + "_content_" + (e + 1));
+        $('#w').myWindows('open');
+    })
+
+    var language = getCookie("language");
+    if (language == null || language == "") {
+        language = "zh-tw";
+    }
+    $('#' + language)[0].classList.add("language-select");
+    $('.lang').each(function(index, element) {
+        $(this).text(arrLang[language][$(this).attr('key')]);
+    });
+
+}
