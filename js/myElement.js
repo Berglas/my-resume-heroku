@@ -1,4 +1,4 @@
-﻿$(document).ready(function() {
+﻿$(function() {
     //將myTable隱藏欄位設為隱藏
     $(".myTable tr td[data-hidden='true'],th[data-hidden='true']").hide();
 
@@ -18,13 +18,15 @@
         }
     })
 
-    //#region 初始化myWindowns    
-    $(".myWindows").append("<div class='close-icon'></div>");
-    $(".myWindows .close-icon").on('click', function(e) {
-        $('#' + $(".myWindows .close-icon").parent('.myWindows')[0].id).myWindows('close');
+    //#region 初始化myWindowns
+
+    $(".myWindows").each(function(e) {
+        $('#' + $(".myWindows")[e].id).append("<div class='close-icon'></div>");
+        $('#' + $(".myWindows")[e].id).after("<div id='" + $(".myWindows")[e].id + "_mask'></div>");
+        $(".myWindows .close-icon").on('click', function(e) {
+            $('#' + $(".myWindows .close-icon").parent('.myWindows')[0].id).myWindows('close');
+        });
     });
-    //$(".myWindows").css("left", ((document.body.clientWidth - $(".myWindows").width()) / 2) + "px");
-    //$(".myWindows").css("top", ((document.documentElement.clientHeight - $(".myWindows").height()) / 2) + "px");
     //#endregion
 
     //初始化myPagination
@@ -207,15 +209,19 @@ $.fn.myPagination = function(functionName) {
 //function name："open"、"close"
 $.fn.myWindows = function(functionName, list) {
     var id = "#" + this[0].id;
-
     if (functionName == "open") {
         $(id).show();
         document.body.parentNode.style.overflow = "hidden";
-        //$('html, body').addClass('lock-back');
+        $(id + '_mask')[0].classList.add("mask");
     } else if (functionName == "close") {
         $(id).hide();
         document.body.parentNode.style.overflow = "auto";
-        //$('html, body').removeClass('lock-back');
+        $(id + '_mask')[0].classList.remove("mask");
+    } else if (functionName == "center") {
+        $(id).css("left", "50%");
+        $(id).css("top", "50%");
+        $(id).css("margin-left", "-" + $(id).width() / 2 + "px");
+        $(id).css("margin-top", "-" + $(id).height() / 2 + "px");
     }
 }
 
