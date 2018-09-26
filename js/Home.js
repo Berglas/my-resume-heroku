@@ -111,6 +111,7 @@ function showSkill(position) {
     $('#w p').each(function(e) {
         $('#w p')[e].setAttribute("key", "SKILLS_" + position + "_content_" + (e + 1));
         $('#w').myWindows('open');
+        $('#w').myWindows('center');
     })
 
     var language = getCookie("language");
