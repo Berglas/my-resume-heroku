@@ -26,6 +26,7 @@ func main() {
 	//設定路由/路徑
 	fmt.Println("start")
 	http.HandleFunc("/", Home)
+	http.HandleFunc("/game", openGame)
 	http.Handle("/css/", http.FileServer(http.Dir("")))
 	http.Handle("/js/", http.FileServer(http.Dir("")))
 	http.Handle("/image/", http.FileServer(http.Dir("")))
@@ -44,5 +45,11 @@ func main() {
 func Home(w http.ResponseWriter, r *http.Request) {
 	gTempData.Version = time.Now().Format("20180911010203")
 	t, _ := template.ParseFiles("Home.html")
+	t.Execute(w, gTempData)
+}
+
+func openGame(w http.ResponseWriter, r *http.Request) {
+	gTempData.Version = time.Now().Format("20180911010203")
+	t, _ := template.ParseFiles("marry.html")
 	t.Execute(w, gTempData)
 }

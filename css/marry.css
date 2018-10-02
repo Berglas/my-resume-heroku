@@ -1,0 +1,214 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background: url(../image/leaves-pattern.png);
+    font-family: Microsoft JhengHei;
+}
+
+input[type=checkbox]+label {
+    display: block;
+    margin: 0.2em;
+    cursor: pointer;
+    padding: 0.2em;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox]+label:before {
+    content: "\2714";
+    border: 0.1em solid #000;
+    border-radius: 0.2em;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    padding-left: 0.2em;
+    padding-bottom: 0.3em;
+    margin-right: 0.2em;
+    vertical-align: bottom;
+    color: transparent;
+    transition: .2s;
+}
+
+input[type=checkbox]+label:active:before {
+    transform: scale(0);
+}
+
+input[type=checkbox]:checked+label:before {
+    background-color: rgb(252, 49, 83);
+    border-color: rgb(44, 44, 44);
+    color: #fff;
+}
+
+input[type=checkbox]:disabled+label:before {
+    transform: scale(1);
+    border-color: #aaa;
+}
+
+input[type=checkbox]:checked:disabled+label:before {
+    transform: scale(1);
+    background-color: rgb(255, 189, 189);
+    border-color: rgb(44, 44, 44);
+}
+
+.start-button {
+    padding: 15px 30px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    color: #fff;
+    background-color: rgb(252, 49, 83);
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 6px rgb(180, 180, 180);
+}
+
+.start-button:active {
+    background-color: rgb(252, 85, 113);
+    box-shadow: 0 3px rgb(80, 80, 80);
+    transform: translateY(4px);
+    cursor: default;
+}
+
+.active {
+    background-color: rgb(252, 85, 113);
+    box-shadow: 0 3px rgb(80, 80, 80);
+    transform: translateY(4px);
+    cursor: default;
+}
+
+.button {
+    height: 32px;
+    width: 80px;
+    border: 1px solid rgb(44, 44, 44);
+    text-align: center;
+    font-size: 32px;
+    color: rgb(252, 49, 83);
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    background-color: rgb(180, 180, 180);
+
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button:active {
+    cursor: pointer;
+    color: rgb(230, 230, 230);
+    background-color: rgb(252, 49, 83);
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    padding: 5% 15% 0% 15%;
+}
+
+.game-block {
+    width: 50%;
+    float: left;
+
+}
+
+.bet-block {
+    width: 50%;
+    float: left;
+    margin-bottom: 100px;
+}
+
+.row {
+    width: 100%;
+    height: 80px;
+    display: flex;
+}
+
+.odds {
+    height: 32px;
+    width: 80px;
+    font-size: 32px;
+    background: rgb(252, 49, 83);
+    color: rgb(250, 250, 250);
+    border: 1px solid rgb(44, 44, 44);
+    text-align: center;
+}
+
+.box {
+    height: 80px;
+    width: 80px;
+    border: 1px solid rgb(44, 44, 44);
+    background-color: rgb(220, 220, 220);
+}
+
+.border-none-top {
+    border-top: none;
+}
+
+.border-none-right {
+    border-right: none;
+}
+
+.border-none-bottom {
+    border-bottom: none;
+}
+
+.border-none-left {
+    border-left: none;
+}
+
+.big {
+    height: 80px;
+    width: 400px;
+    border: none;
+    text-align: center;
+    font-size: 32px;
+    background: none;
+}
+
+.bet-block ul li {
+    float: left;
+}
+
+.is-select {
+    background-color: rgb(252, 49, 83);
+}
+
+
+.img-orange {
+    overflow: hidden;
+    background-position: -3px 10px;
+    background-image: url(../image/reel_normal.png);
+}
+
+.img-seven {
+    overflow: hidden;
+    background-position: -3px -66px;
+    background-image: url(../image/reel_normal.png);
+}
+
+.img-bar {
+    overflow: hidden;
+    background-position: -3px -139px;
+    background-image: url(../image/reel_normal.png);
+}
+
+.img-pear {
+    overflow: hidden;
+    background-position: -3px -205px;
+    background-image: url(../image/reel_normal.png);
+}
+
+.img-banana {
+    overflow: hidden;
+    background-position: 0px -282px;
+    background-image: url(../image/reel_normal.png);
+}
+
+.img-cherry {
+    overflow: hidden;
+    background-position: 5px -365px;
+    background-image: url(../image/reel_normal.png);
+}
