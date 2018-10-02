@@ -8,15 +8,15 @@
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-    <script type="text/javascript" src="js/myElement.js?{{.Version}}"></script>
-    <link rel="stylesheet" type="text/css" href="css/myElement.css?{{.Version}}" />
+    <script type="text/javascript" src="js/myElement.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/myElement.css" />
     <link rel="stylesheet" type="text/css" href="css/breeze.css" />
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="css/hover-animation.css" />
     <link rel="stylesheet" type="text/css" href="css/shared.css" />
-    <link rel="stylesheet/less" type="text/css" href="css/Home.less?{{.Version}}" />
+    <link rel="stylesheet/less" type="text/css" href="css/Home.less" />
     <script type="text/javascript" src="js/Home.js"></script>
-    <script type="text/javascript" src="js/translate.js?{{.Version}}"></script>
+    <script type="text/javascript" src="js/translate.js"></script>
     <script type="text/javascript" src="js/less.min.js"></script>
 </head>
 
@@ -117,7 +117,7 @@
             <h1 class='lang' key="Itme_SKILLS"></h1>
         </div>
         <div class='skill-content'>
-            <div id='w' class='myWindows dark-style' style='height: 100vh;width: 100vw;'>
+            <div id='w' class='myWindows'>
                 <h3 class='lang' key=''></h3>
                 <p class='lang' key=''></p>
                 <p class='lang' key=''></p>
@@ -320,6 +320,11 @@
 </body>
 <script type="text/javascript">
 $(document).ready(function() {
+    if ($(window).width() > 900) {
+        $('#w').width('25%');
+        $('#w').height('25%');
+    }
+
     var language = getCookie("language");
     if (language == null || language == "") {
         language = "zh-tw";
@@ -328,6 +333,7 @@ $(document).ready(function() {
     $('.lang').each(function(index, element) {
         $(this).text(arrLang[language][$(this).attr('key')]);
     });
+
 });
 
 $(function() {
