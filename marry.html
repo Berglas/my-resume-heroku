@@ -5,13 +5,15 @@
     <meta charset="UTF-8">
     <script type="text/javascript" src="js/jquery.min.js"></script>
     <script type="text/javascript" src="js/Jquery.patch.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/marry.css" />
     <link rel="stylesheet" type="text/css" href="css/shared.css" />
+    <link rel="stylesheet" type="text/css" href="css/marry.css" />    
     <script type="text/javascript" src="js/marry.js"></script>
 </head>
 
 <body>
     <div class="container">
+        <h1>一日小瑪莉，終身無巴幣</h1>
+        <!--  -->
         <div class="game-block">
             <div class="row">
                 <div id="item0" class="box is-select border-none-right"></div>
@@ -24,7 +26,7 @@
             </div>
             <div class="row">
                 <div id="item23" class="box border-none-bottom border-none-top"></div>
-                <div class="box big">一日小瑪莉，終身無巴幣</div>
+                <div class="box big"></div>
                 <div id="item7" class="box border-none-top"></div>
             </div>
             <div class="row">
@@ -95,7 +97,11 @@
             </div>
             <div class="row">
                 <div id="item19" class="box border-none-bottom"></div>
-                <div class="box big"></div>
+                <div class="box big"><div>
+            <input type="checkbox" id="auto_cb" name="auto_cb">
+            <label for="auto_cb">自動下注</label>
+           
+        </div></div>
                 <div id="item11" class="box border-none-top"></div>
             </div>
             <div class="row">
@@ -106,7 +112,7 @@
                 <div id="item14" class="box border-none-left"></div>
                 <div id="item13" class="box border-none-left"></div>
                 <div id="item12" class="box border-none-top border-none-left"></div>
-            </div>
+            </div>            
         </div>
         <div class="bet-block">
             <ul>
@@ -279,12 +285,9 @@
                     <div class="button border-none-top border-none-left" onclick="minus('bet-cherry')">▼</div>
                 </li>
             </ul>
+            <p style='width: 480px;'>說明：自動下注為保持當前下注情況(結算完後，資金顯示為下注完成的金額)，若沒勾選，則結算完後會清空當前下注。</p>
         </div>
-        <div>
-            <input type="checkbox" id="auto_cb" name="auto_cb">
-            <label for="auto_cb">自動下注</label>
-            <p>說明：自動下注為保持當前下注情況(結算完後，資金顯示為下注完成的金額)，若沒勾選，則結算完後會清空當前下注。</p>
-        </div>
+         
     </div>
 </body>
 
