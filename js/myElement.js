@@ -19,7 +19,6 @@
     })
 
     //#region 初始化myWindowns
-
     $(".myWindows").each(function(e) {
         $('#' + $(".myWindows")[e].id).append("<div class='close-icon'></div>");
         $('#' + $(".myWindows")[e].id).after("<div id='" + $(".myWindows")[e].id + "_mask'></div>");
@@ -50,8 +49,6 @@
             $(".myPagination")[0].setAttribute('data-index', this.getAttribute('data-type'));
             this.classList.add('active');
         }
-
-
     });
 })
 
@@ -226,7 +223,7 @@ $.fn.myWindows = function(functionName, list) {
 }
 
 //myWindows拖曳事件
-//$(function () {
+// $(function () {
 //    $('.myWindows').mousedown(function () {
 //        recordPos(this);
 //    });
@@ -257,4 +254,4 @@ $.fn.myWindows = function(functionName, list) {
 //        obj.style.left = parseInt(obj.style.left) + deltaX;
 //        obj.style.top = parseInt(obj.style.top) + deltaY;
 //    }
-//})
+// })

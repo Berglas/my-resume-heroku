@@ -27,81 +27,62 @@ function deleteCookie(name) {
 }
 
 
+
+//設定錨點
+$(function() {
+    $('a[href*=#]:not([href=#])').click(function() {
+        if ($(this)[0].hash != "#skill_carousel") {
+            var target = $(this.hash);
+            $('html, body').animate({
+                scrollTop: target.offset().top
+
+            }, 400);
+
+            return false;
+        };
+    });
+});
+
+//進行翻譯
+$(function() {
+    $('.translate').click(function() {
+        $('.translate').each(function(index, el) {
+            el.classList.remove("language-select");
+        });
+        setCookie("language", this.id, 24);
+        this.classList.add("language-select");
+    });
+});
+
+//設定expanded-box開關
+$(function() {
+    $('.expanded-switch').on('click', function() {
+        this.classList.toggle('expanded-cross');
+        $(this).parent()[0].classList.toggle('is-expanded');
+    })
+});
+
 //定義輪播
 $(function() {
-    var $item = $('.carousel .item');
-    var wHeight = $(window).height() - 40;
-    if ($(window).width() > 900) {
-        wHeight = $(window).height() - 140;
-    }
-    $item.height(wHeight);
+    var li = "";
+    var total = $('.carousel .carousel-inner div.carousel-item').size();
+    var carousel_ID = $(".carousel")[0].id;
 
-    $('.carousel img').each(function() {
-        var $src = $(this).attr('src');
-        var $color = $(this).attr('data-color');
-        $(this).parent().css({
-            'background-image': 'url(' + $src + ')',
-            'background-color': $color
-        });
-        $(this).remove();
-    });
-
-    //下方自動加入控制圓鈕
-    var total = $('.carousel .carousel-inner div.item').size();
-    append_li();
-
-    function append_li() {
-        var li = "";
-        var get_ac = $(".carousel .active");
-        var ac = $(".carousel .carousel-inner div").index(get_ac);
-
-        for (var i = 0; i <= total - 1; i++) {
-            if (i == (ac) / 2) {
-                li += "<li data-target='#mycarousel' data-slide-to='" + i + "' class='active'></li>";
-            } else {
-                li += "<li data-target='#mycarousel' data-slide-to='" + i + "' class=''></li>";
-            }
+    for (var i = 0; i <= total - 1; i++) {
+        if (i == 0) {
+            li += "<li data-target='#" + carousel_ID + "' data-slide-to='" + i + "' class='active'></li>";
+        } else {
+            li += "<li data-target='#" + carousel_ID + "' data-slide-to='" + i + "' class=''></li>";
         }
-        $(".carousel-indicators").append(li);
     }
 
-    //單則隱藏控制鈕
-    if ($('.carousel .carousel-inner div.item').length < 2) {
-        $('.carousel-indicators, .carousel-control').hide();
-    }
-
-    //縮放視窗調整視窗高度
-    $(window).on('resize', function() {
-        var wHeight = $(window).height() - 40;
-        if ($(window).width() > 900) {
-            wHeight = $(window).height() - 140;
-        }
-        $item.height(wHeight);
-    });
+    $(".carousel-indicators").append(li);
 
     //輪播秒數與滑入停止
     $('.carousel').carousel({
         interval: false
     });
 });
-
-//響應式選單開啟事件定義
-$(function() {
-    $("#openMenu").on("click", function(e) {
-        $('body')[0].classList.add("openMenu");
-        e.stopPropagation();
-        $(document).on("click", function(e) {
-            // 如果點擊側邊欄以外的區域，就關閉側邊欄 
-            if (!e.target.closest("#Menu-content")) {
-                $('body')[0].classList.remove("openMenu");
-            }
-        });
-    });
-});
-
-function closeMenu() {
-    $('body')[0].classList.remove("openMenu");
-}
 
 function showSkill(position) {
     $('#w h3').each(function(e) {

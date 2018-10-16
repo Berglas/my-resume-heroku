@@ -1,0 +1,280 @@
+@dark-color: rgb(47, 51, 58);
+@white-color: rgb(242, 242, 242);
+
+.Web-display {
+    display: none;
+}
+
+.Mobile-display {
+    display: block;
+}
+
+video {
+    display: none;
+}
+
+section {
+    padding-top: 40px;
+    width: 100%;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 24px;
+    line-height: 100%;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 16px;
+}
+
+h3 {
+    font-size: 12px;
+}
+
+.wrapper {
+    display: none;
+}
+
+#openMenu {
+    transition: 0.4s;
+    cursor: pointer;
+}
+
+#menu-content {
+    position: fixed;
+    left: 100%;
+    top: 0;
+    z-index: 1;
+    overflow: auto;
+    width: 75vw;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 1);
+    transition: 0.4s ease-in-out;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+
+.openMenu #menu-content {
+    left: 25%;
+}
+
+#menu-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#menu-content ul li a {
+    display: block;
+    padding: 12px 24px;
+    background-color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+    color: rgb(44, 44, 44);
+    border-bottom: 1px solid rgba(180, 180, 180, 0.6);
+    transition: 0.4s;
+}
+
+#menu-content div {
+    width: calc(50% - 14px);
+    float: left;
+}
+
+#menu-content div:nth-child(3) {
+    width: 10px;
+}
+
+.menu-box {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 40px;
+    z-index: 600;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.web-title {
+    background-color: rgba(167, 98, 133, 0.3);
+    height: 150%;
+    left: 42%;
+    position: absolute;
+    top: -78%;
+    width: 150%;
+    .less-transform(330deg);
+    z-index: 999;
+}
+
+.home-item-box {
+    height: 100%;
+    width: 100%;
+}
+
+.home-item {
+    height: 25%;
+    width: 100%;
+}
+
+.home-item a {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0);
+}
+
+.home-item h2 {
+    background: rgba(44, 44, 44, 0.2);
+    color: rgb(255, 255, 255);
+    font-size: 34px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    padding: 16% 0%;
+}
+
+.profile-title {
+    height: 10%;
+    width: 100%;
+    color: #fff;
+    padding: 10px;
+}
+
+.profile-title h1 {
+    color: @dark-color;
+}
+
+.profile-info {
+    background-image: url(../image/RESUME.jpg);
+    background-size: 100%;
+    height: 30%;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    padding: 5px;
+}
+
+.profile-content {
+    height: 60%;
+    width: 100%;
+    background: rgba(250, 250, 250, 1);
+    padding: 15px;
+}
+
+.skill-title {
+    height: 10%;
+    width: 100%;
+    padding: 10px;
+}
+
+.skill-content {
+    height: 90%;
+    width: 100%;
+}
+
+.skills-img {
+    height: 30%;
+    width: 100%;
+    z-index: 200;
+    border-top-right-radius: 5%;
+    border-top-left-radius: 5%;
+    background-size: 100% 100% !important;
+}
+
+.skills-box {
+    height: 70%;
+    width: 100%;
+    background-color: rgb(215, 230, 230);
+    border-bottom-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+    padding: 5%;
+
+    p {
+        font-size: 16px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+    }
+}
+
+.protfolio-title {
+    height: 10%;
+    width: 100%;
+    padding: 10px;
+}
+
+.protfolio-item-box {
+    height: 90%;
+    width: 100%;
+
+
+    ul {
+        width: 100%;
+        height: 100%;
+        display: -webkit-box;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 20% 0%;
+
+        li {
+            margin: 25px 0px 0px 25px;
+            width: 100%;
+            height: 100%;
+            max-width: 300px;
+            max-height: 300px;
+            margin-left: 30px;
+        }
+
+        li::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
+
+.communicate-box {
+    width: 90%;
+    height: 40%;
+    padding: 0% 5%;
+}
+
+.communicate-box form {
+    height: 90%;
+    width: 100%;
+}
+
+
+.communicate-box input {
+    width: calc(50% - 20px);
+    margin: 5px;
+    padding: 10px;
+}
+
+.communicate-box textarea {
+    resize: none;
+    width: calc(100% - 20px);
+    margin: 5px;
+    padding: 10px;
+    height: 30%;
+}
+
+.thx-box {
+    width: 90%;
+    height: 40%;
+    padding: 0% 5%;
+}
+
+.footer-box {
+    color: rgb(210, 212, 213);
+    background: rgb(41, 51, 58);
+    width: 100%;
+    height: 20%;
+    padding: 5px 25px;
+}
+
+.footer-box {
+    p {
+        font-size: 16px;
+        font-weight: 600;
+    }
+
+    span {
+        font-size: 16px;
+        font-weight: 600;
+    }
+}
