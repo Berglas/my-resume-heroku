@@ -4,7 +4,7 @@
 
 @dark-color: rgb(47, 51, 58);
 @white-color: rgb(242, 242, 242);
-@theme-color: rgb(167, 98, 133);
+@theme-color: rgb(102, 49, 124);
 
 .less-transform(@deg) {
     transform: rotate(@deg);
@@ -22,12 +22,12 @@
 }
 
 ::selection {
-    background: rgb(167, 98, 133);
+    background: @theme-color;
     color: rgb(242, 242, 242);
 }
 
 ::-moz-selection {
-    background: rgb(167, 98, 133);
+    background: @theme-color;
     color: rgb(242, 242, 242);
 }
 
@@ -77,48 +77,24 @@ a:visited {
 
 body {
     font-family: 'Microsoft JhengHei';
-    background: radial-gradient(ellipse at center, rgba(167, 98, 133, 0.1) 0%, rgba(167, 98, 133, 0.2) 45%, rgba(167, 98, 133, 0.3) 100%);
-
+    // background: radial-gradient(ellipse at center, rgba(102, 49, 124, 0.1) 0%, rgba(102, 49, 124, 0.2) 45%, rgba(102, 49, 124, 0.3) 100%);
     color: @dark-color;
 }
 
-#page1 {
-    // background: radial-gradient(ellipse at center, rgba(167, 98, 133, 0.1) 0%, rgba(167, 98, 133, 0.2) 45%, rgba(167, 98, 133, 0.3) 100%);
-}
-
 .translate {
-    font-size: 2em;
+    font-size: 32px;
     font-weight: 900;
-    color: rgba(167, 98, 133, 0.2);
+    color: rgba(102, 49, 124, 0.2);
     transition: 400ms all;
 }
 
 .translate:hover {
     cursor: pointer;
-    color: rgba(167, 98, 133, 1);
+    color: @theme-color;
 }
 
 .language-select {
-
-    color: rgba(167, 98, 133, 1);
-}
-
-.button {
-    background: rgba(255, 255, 255, 0);
-    border: 1px solid rgb(180, 180, 180);
-    color: rgb(44, 44, 44);
-    padding: 5px 10px;
-    margin: 5px;
-}
-
-.button:hover {
-    color: rgb(255, 255, 255);
-    background: rgba(180, 180, 180, 0.8);
-}
-
-.title {
-    color: rgb(21, 157, 132);
-    font-size: 30px;
+    color: @theme-color;
 }
 
 .carousel-control-prev-icon {
@@ -148,49 +124,145 @@ body {
     }
 }
 
-.wave-box {
-    height: 0%;
-    width: 100%;
+.animation-text-show {
+    position: relative;
+    overflow: hidden;
+    animation: text-show 5s;
+    opacity: 1;
+    display: block;
+}
+
+.animation-text-show:after {
+    background-color: @theme-color;
+    display: block;
+    opacity: 1;
+    content: "";
     position: absolute;
-    bottom: 0;
     left: 0;
+    top: 0;
+    z-index: 9999;
+    animation: text-show-after 5s;
+    height: 100%;
+    .less-transform(45deg);
 }
 
-.wave {
-    background: url(../image/wave.svg) repeat-x;
-    position: absolute;
-    top: -198px;
-    width: 6400px;
-    height: 198px;
-    animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-    transform: translate3d(0, 0, 0);
-    opacity: 0.4;
-}
-
-.wave:nth-of-type(2) {
-    animation: wave 10s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
-}
-
-@keyframes wave {
+@-webkit-keyframes text-show {
     0% {
-        margin-left: 0;
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0.7;
     }
 
     100% {
-        margin-left: -1600px;
+        opacity: 1;
     }
 }
 
+@keyframes text-show {
+    0% {
+        opacity: 0;
+    }
 
-// 顏色遮罩
-//     .aaa:after {
-//         background-color: rgb(44, 44, 44);
-//         display: block;
-//         opacity: 0.5;
-//         content: "";
-//         height: 100%;
-//         left: 0px;
-//         position: relative;
-//         top: 0px;
-//         width: 100%;
-//     }
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes text-show-after {
+    0% {
+        left: -50%;
+        top: 50%;
+        width: 100%;
+    }
+
+    100% {
+        left: 0%;
+        width: 2000%;
+    }
+}
+
+@keyframes text-show-after {
+    0% {
+        left: -100%;
+        top: 50%;
+        width: 100%;
+    }
+
+    100% {
+        left: 0%;
+        top: 0%;
+        width: 1000%;
+    }
+}
+
+/* From Middle */
+.button {
+    position: absolute;
+    font-weight: 900;
+    transition: all .3s cubic-bezier(0.77, 0, 0.175, 1);
+    cursor: pointer;   
+    text-align: center;
+    padding: 2%;
+    width: 30%;
+    bottom: 10px;
+    right: 10px;
+    border: 2px solid @dark-color;
+    font-size: 16px;
+}
+
+.button:before,
+.button:after {
+    content: '';
+    position: absolute;
+    transition: inherit;
+    z-index: -1;
+}
+
+.button:hover {
+    color: rgb(255,255,255);
+    transition-delay: .3s;
+}
+
+.button:hover:before {
+    transition-delay: 0s;
+}
+
+.button:hover:after {
+    background: rgba(102, 49, 124,0.5);
+    transition-delay: .2s;
+}
+
+.from-middle:before {
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: 0;
+    border: 1px solid rgba(102, 49, 124,0.5);
+    border-left: 0;
+    border-right: 0;
+}
+
+.from-middle:after {
+    bottom: 0;
+    left: 0;
+    height: 0;
+    width: 100%;
+    background: rgba(102, 49, 124,0.5);
+}
+
+.from-middle:hover:before {
+    left: 0;
+    width: 100%;
+}
+
+.from-middle:hover:after {
+    top: 0;
+    height: 100%;
+}
+

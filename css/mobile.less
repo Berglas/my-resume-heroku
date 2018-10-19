@@ -10,13 +10,17 @@
 }
 
 video {
-    display: none;
+    min-width: 100%;
+    min-height: 100%;
+    right: 0;
+    bottom: 0;
 }
 
 section {
     padding-top: 40px;
     width: 100%;
     height: 100vh;
+    overflow: hidden;
 }
 
 h1 {
@@ -94,14 +98,60 @@ h3 {
 }
 
 .web-title {
-    background-color: rgba(167, 98, 133, 0.3);
-    height: 150%;
-    left: 42%;
+    background: linear-gradient(45deg, rgba(102, 49, 124, 0) 0%, rgba(102, 49, 124, 0.3) 90%);
     position: absolute;
-    top: -78%;
-    width: 150%;
-    .less-transform(330deg);
-    z-index: 999;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    h1 {
+        background-color: rgba(255, 255, 255, 0.8);
+        position: relative;
+        font-size: 48px;
+        border: none;
+        top: 20%;
+        left: 20%;
+        border-bottom: 2px solid @theme-color;
+        .less-transform(330deg);
+        animation: h1-enter 1s;
+    }
+
+    h2 {
+        background-color: rgba(255, 255, 255, 0.8);
+        position: relative;
+        font-size: 24px;
+        top: 100%;
+        left: 100%;
+        margin-top: 10px;
+        border-bottom: 2px solid @theme-color;
+        .less-transform(330deg);
+    }
+
+    h2:nth-child(2) {
+        animation: h2-enter 1s;
+        animation-delay: 0.5s;
+        animation-fill-mode: forwards;
+    }
+
+    h2:nth-child(3) {
+        animation: h2-enter 1s;
+        animation-delay: 1s;
+        animation-fill-mode: forwards;
+    }
+
+    h2:nth-child(4) {
+        animation: h2-enter 1s;
+        animation-delay: 1.5s;
+        animation-fill-mode: forwards;
+    }
+
+    h2:nth-child(5) {
+        animation: h2-enter 1s;
+        animation-delay: 2s;
+        animation-fill-mode: forwards;
+    }
 }
 
 .home-item-box {
@@ -276,5 +326,53 @@ h3 {
     span {
         font-size: 16px;
         font-weight: 600;
+    }
+}
+
+@-webkit-keyframes h1-enter {
+     0% {
+        top: 0%;
+        left: 100%;
+    }
+
+    100% {
+        top: 20%;
+        left: 20%;
+    }
+}
+
+@keyframes h1-enter {
+    0% {
+        top: 0%;
+        left: 100%;
+    }
+
+    100% {
+        top: 20%;
+        left: 20%;
+    }
+}
+
+@-webkit-keyframes h2-enter {
+   0% {
+        top: 0%;
+        left: 100%;
+    }
+
+    100% {
+        top: 20%;
+        left: 40%;
+    }
+}
+
+@keyframes h2-enter {
+    0% {
+        top: 0%;
+        left: 100%;
+    }
+
+    100% {
+        top: 20%;
+        left: 40%;
     }
 }

@@ -26,12 +26,33 @@ function deleteCookie(name) {
         document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString();
 }
 
+$(window).scroll(function() {
+    var x = $('#page0').offset().top;
+    var x1 = $('#page1').offset().top;
+    var x2 = $('#page2').offset().top;
+    var x3= $('#page3').offset().top;
+    if ($(this).scrollTop() >= x && $(this).scrollTop() <=x1 * 0.8)
+    {
+        //$('.profile-education')[0].classList.add('animation-text-show');
+    }
+    else if ($(this).scrollTop() >= x1 * 0.8 && $(this).scrollTop() <=x2)
+    {
+        // console.log("page1");
+        $('.profile-education')[0].classList.add('animation-text-show');
+        setTimeout(function() {$('.profile-info')[0].classList.add('animation-text-show');}, 800);
+        setTimeout(function() {$('.profile-statement')[0].classList.add('animation-text-show');}, 1600);
+    }
+    else if ($(this).scrollTop() >= x2 && $(this).scrollTop() <=x3)
+    {
+        // console.log("page2");
+    }
 
+});
 
 //設定錨點
 $(function() {
     $('a[href*=#]:not([href=#])').click(function() {
-        if ($(this)[0].hash != "#skill_carousel") {
+        if ($(this)[0].hash != "#protfolio_carousel") {
             var target = $(this.hash);
             $('html, body').animate({
                 scrollTop: target.offset().top
@@ -57,8 +78,13 @@ $(function() {
 //設定expanded-box開關
 $(function() {
     $('.expanded-switch').on('click', function() {
-        this.classList.toggle('expanded-cross');
         $(this).parent()[0].classList.toggle('is-expanded');
+    })
+});
+
+$(function() {
+    $('.expanded-button').on('click', function() {
+        $($($(this).parent()[0]).parent()[0]).parent()[0].classList.toggle('is-expanded');
     })
 });
 
@@ -83,25 +109,3 @@ $(function() {
         interval: false
     });
 });
-
-function showSkill(position) {
-    $('#w h3').each(function(e) {
-        $('#w h3')[0].setAttribute("key", "SKILLS_" + position);
-    })
-
-    $('#w p').each(function(e) {
-        $('#w p')[e].setAttribute("key", "SKILLS_" + position + "_content_" + (e + 1));
-        $('#w').myWindows('open');
-        $('#w').myWindows('center');
-    })
-
-    var language = getCookie("language");
-    if (language == null || language == "") {
-        language = "zh-tw";
-    }
-    $('#' + language)[0].classList.add("language-select");
-    $('.lang').each(function(index, element) {
-        $(this).text(arrLang[language][$(this).attr('key')]);
-    });
-
-}
