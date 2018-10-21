@@ -276,7 +276,7 @@
         float: left;
         height: 100%;
         width: 100%;
-        border-top: 3px dashed rgb(102, 49, 124);
+        border-bottom: 2px dashed rgb(102, 49, 124);
     }
 
     .sliding-menu div {

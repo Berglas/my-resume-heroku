@@ -6,6 +6,10 @@
     display: none;
 }
 
+body {
+    font-size: 100%;
+}
+
 video {
     min-width: 100%;
     min-height: 100%;
@@ -32,17 +36,19 @@ section {
 // }
 
 h1 {
-    font-size: 48px;
+    font-size: 3em;
     line-height: 100%;
     font-weight: 700;
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 2em;
+    line-height: 100%;
 }
 
 h3 {
-    font-size: 24px;
+    font-size: 1em;
+    line-height: 100%;
 }
 
 .title {
@@ -50,7 +56,7 @@ h3 {
 }
 
 .web-title {
-    background: linear-gradient(45deg, rgba(102, 49, 124, 0) 0%, rgba(102, 49, 124, 0.3) 90%);
+    background: linear-gradient(45deg, rgba(102, 49, 124, 0) 0%, rgba(102, 49, 124, 0.3) 60%, rgba(102, 49, 124, 1) 90%);
     position: absolute;
     top: 0%;
     left: 0%;
@@ -60,8 +66,8 @@ h3 {
     h1 {
         background-color: rgba(255, 255, 255, 0.8);
         position: relative;
-        font-size: 96px;
         border: none;
+        font-size: 4em;
         top: 0;
         left: 50%;
         border-bottom: 2px solid @theme-color;
@@ -72,9 +78,8 @@ h3 {
     h2 {
         background-color: rgba(255, 255, 255, 0.8);
         position: relative;
-        font-size: 48px;
         left: 100%;
-        margin-top: 10px;
+        margin-top: 8px;
         border-bottom: 2px solid @theme-color;
         .less-transform(330deg);
     }
@@ -104,10 +109,9 @@ h3 {
     }
 }
 
-
 .profile-education {
     height: 90%;
-    width: 40%;
+    width: 50%;
     float: left;
     padding: 5%;
     display: none;
@@ -121,18 +125,20 @@ h3 {
         .less-box-shadow(12px 8px 4px 1px rgba(47, 51, 58, 0.2));
         border: 8px solid rgba(255, 255, 255, 0.2);
         background: rgba(102, 49, 124, 0.5);
+        color: @white-color;
     }
 }
 
 .profile-info {
     height: 50%;
-    width: 60%;
+    width: 50%;
     color: rgb(255, 255, 255);
     float: right;
     display: none;
     padding: 5% 5% 0% 0%;
 
     >div {
+
         height: 100%;
         width: 100%;
         padding: 5%;
@@ -141,11 +147,15 @@ h3 {
         background: rgba(102, 49, 124, 0.5);
         color: @white-color;
     }
+
+    p {
+        font-size: 1em;
+    }
 }
 
 .profile-statement {
     height: 50%;
-    width: 60%;
+    width: 50%;
     float: right;
     padding: 1% 5% 5% 0%;
     display: none;
@@ -157,6 +167,11 @@ h3 {
         .less-box-shadow(12px 8px 4px 1px rgba(47, 51, 58, 0.2));
         border: 8px solid rgba(255, 255, 255, 0.2);
         background: rgba(102, 49, 124, 0.5);
+        color: @white-color;
+    }
+
+    p {
+        font-size: 1em;
     }
 }
 
@@ -195,7 +210,6 @@ h3 {
 
 .skill-title {
     height: 10%;
-    min-height: 48px;
     width: calc(100% - 48px);
     padding-top: 24px;
     margin-left: 48px;
@@ -204,13 +218,54 @@ h3 {
 .skill-box {
     height: 90%;
     width: 100%;
+    position: relative;
 }
 
 .skill-img {
     height: 40%;
-    width: 100%;
+    width: 60%;
+    position: absolute;
+    bottom: -10%;
+    left: -20%;
     background-size: 100% 100% !important;
-    opacity: 0.7;
+    opacity: 0.8;
+    .less-transform(25deg);
+    border-radius: 20%;
+    filter: grayscale(50%);
+}
+
+.skill-img::after {
+    height: 110%;
+    width: 110%;
+    position: absolute;
+    bottom: -8%;
+    left: -8%;
+    display: block;
+    content: '';
+    border: 3px solid @theme-color;
+    .less-transform(350deg);
+    border-radius: 20%;
+}
+
+.skill-button {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    background: rgba(102, 49, 124, 0.8);
+    padding: 8px 24px;
+    font-size: 1em;
+    font-weight: 600;
+    color: @white-color;
+    transition: all .6s;
+    border-radius: 5%;
+    border: 2px solid rgba(102, 49, 124, 0);
+
+}
+
+.skill-button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    border: 2px solid rgba(102, 49, 124, 1);
 }
 
 .skill-content {
@@ -220,11 +275,35 @@ h3 {
     color: #444;
 
     p {
-        font-size: 16px;
+        font-size: 1em;
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
     }
+}
+
+.content-title {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: #444;
+    width: 150px;
+    height: 150px;
+    font-size: 2em;
+    padding-top: 10px;
+}
+
+.content-title::after {
+    position: absolute;
+    top: -65px;
+    right: -20px;
+    display: block;
+    content: '';
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    .less-transform(75deg);
+    border-radius: 20%;
 }
 
 .is-expanded {
@@ -232,9 +311,26 @@ h3 {
         .skill-img {
             height: 100%;
             width: 30%;
-            float: left;
+            position: absolute;
+            top: 0;
+            left: 0;
             background-size: 100% 100% !important;
-            opacity: 0.7;
+            border-radius: 0%;
+            .less-transform(0deg);
+            filter: grayscale(0%);
+        }
+
+        .skill-img::after {
+            display: none;
+        }
+
+        .content-title {
+            right: 48px;
+            color: #444;
+            width: 150px;
+            height: 150px;
+            font-size: 2em;
+            padding-top: 10px;
         }
 
         .skill-content {
@@ -245,8 +341,8 @@ h3 {
             color: #444;
 
             p {
-                font-size: 24px;
-                line-height: 200%;
+                font-size: 1.5em;
+                line-height: 180%;
                 overflow: visible;
                 white-space: pre-line;
                 text-overflow: none;
@@ -258,43 +354,55 @@ h3 {
 .expanded-box {
     z-index: 0;
     width: 30%;
-    height: calc(80% - 48px);
+    height: 90%;
     overflow: hidden;
     transition: all 800ms;
     position: absolute;
-    .less-box-shadow(24px 16px 10px 1px rgba(47, 51, 58, 0.2));
+    .less-box-shadow(16px 8px 8px 1px rgba(47, 51, 58, 0.2));
 }
 
 .expanded-box:nth-child(1) {
-    top: calc(5% + 48px);
+    top: 5%;
     left: 2.5%;
     background: linear-gradient(90deg, rgba(219, 237, 255, 0.9)0%, rgba(255, 255, 255, 1)30%);
     background: -moz-linear-gradient(90deg, rgba(219, 237, 255, 0.9)0%, rgba(255, 255, 255, 1)30%);
     background: -webkit-linear-gradient(90deg, rgba(219, 237, 255, 0.9)0%, rgba(255, 255, 255, 1)30%);
     background: -o-linear-gradient(90deg, rgba(219, 237, 255, 0.9)0%, rgba(255, 255, 255, 1)30%);
+
+    .content-title::after {
+        background: rgb(219, 237, 255);
+    }
 }
 
 .expanded-box:nth-child(2) {
-    top: calc(5% + 48px);
+    top: 5%;
     left: 35%;
     background: linear-gradient(90deg, rgba(255, 203, 179, 0.9)0%, rgba(255, 255, 255, 1)30%);
     background: -moz-linear-gradient(90deg, rgba(255, 203, 179, 0.9)0%, rgba(255, 255, 255, 1)30%);
     background: -webkit-linear-gradient(90deg, rgba(255, 203, 179, 0.9)0%, rgba(255, 255, 255, 1)30%);
     background: -o-linear-gradient(90deg, rgba(255, 203, 179, 0.9)0%, rgba(255, 255, 255, 1)30%);
+
+    .content-title::after {
+        background: rgb(255, 203, 179);
+    }
 }
 
 .expanded-box:nth-child(3) {
-    top: calc(5% + 48px);
+    top: 5%;
     left: 67.5%;
-    background: linear-gradient(90deg, rgba(255, 255, 204, 0.9)0%, rgba(255, 255, 255, 1)30%);
-    background: -moz-linear-gradient(90deg, rgba(255, 255, 204, 0.9)0%, rgba(255, 255, 255, 1)30%);
-    background: -webkit-linear-gradient(90deg, rgba(255, 255, 204, 0.9)0%, rgba(255, 255, 255, 1)30%);
-    background: -o-linear-gradient(90deg, rgba(255, 255, 204, 0.9)0%, rgba(255, 255, 255, 1)30%);
+    background: linear-gradient(90deg, rgba(255, 255, 194, 0.9)0%, rgba(255, 255, 255, 1)30%);
+    background: -moz-linear-gradient(90deg, rgba(255, 255, 194, 0.9)0%, rgba(255, 255, 255, 1)30%);
+    background: -webkit-linear-gradient(90deg, rgba(255, 255, 194, 0.9)0%, rgba(255, 255, 255, 1)30%);
+    background: -o-linear-gradient(90deg, rgba(255, 255, 194, 0.9)0%, rgba(255, 255, 255, 1)30%);
+
+    .content-title::after {
+        background: rgb(255, 255, 194);
+    }
 }
 
 .expanded-box:nth-child(1).is-expanded {
     position: absolute;
-    top: calc(5% + 48px);
+    top: 5%;
     left: 2.5%;
     z-index: 1000;
     width: 95%;
@@ -303,7 +411,7 @@ h3 {
 
 .expanded-box:nth-child(2).is-expanded {
     position: absolute;
-    top: calc(5% + 48px);
+    top: 5%;
     left: 2.5%;
     width: 95%;
     z-index: 900;
@@ -311,7 +419,7 @@ h3 {
 
 .expanded-box:nth-child(3).is-expanded {
     position: absolute;
-    top: calc(5% + 48px);
+    top: 5%;
     left: 2.5%;
     width: 95%;
     z-index: 900;
@@ -431,11 +539,25 @@ h3 {
     float: right;
 }
 
-.protfolio-img {
-    width: 100%;
+.protfolio-info {
+    width: 40%;
     height: 60%;
+    background: @theme-color;
+    position: absolute;
+    // left: 10%;
+    top: 12%;
+    padding: 5%;
+    // border-radius: 100%;
+    color: @white-color;
+}
+
+.protfolio-img {
+    width: 70%;
+    height: 80%;
     background-size: 100% 100% !important;
-    border: 8px solid @white-color;
+    position: absolute;
+    left: 20%;
+    // border-radius: 100%;
 }
 
 .carousel {

@@ -26,6 +26,7 @@ function deleteCookie(name) {
         document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString();
 }
 
+//滾動事件
 $(window).scroll(function() {
     var x = $('#page0').offset().top;
     var x1 = $('#page1').offset().top;

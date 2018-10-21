@@ -11,8 +11,8 @@ var arrLang = {
         'PROFILE_Education_title': 'Education',
         'PROFILE_Experience_title': 'Experience',
         'PROFILE_Education1': ' • Da-Yeh University CSIE.',
-        'PROFILE_Personality_1': 'Have passion to learn and programming.',
-        'PROFILE_Personality_2': 'Happy to accept challenges.',
+        'PROFILE_AboutMe': 'Since I started working on programming, I liked programming, and even after I was working, I wrote code. I\'ve been involved in front-end and back-end programming languages, trying to be a full-end engineer, but I prefer front-end design to the back end. In addition to programming, I like to paint and even start to learn art design. I like reasoning. Whether it is a novel or a puzzle, my friends have said that I am good at logical reasoning.',
+        'PROFILE_Statement': 'Happy to accept challenges.',
         'PROFILE_Personality_3': 'Love design and solve problems.',
         'RESUME_Experience_1': ' • Jabil Green Point(Full Stack Developer). Jul 2015-Jun 2016',
         'RESUME_Experience_2': ' • Jabil Green Point(Full Stack Developer). Jul 2016-Nov 2016',
@@ -33,8 +33,8 @@ var arrLang = {
         'SKILLS_backend_content_4': ' • Has OOP and setting server concept.',
         'SKILLS_backend_content_5': ' • Developing PLC control program with KEYENCE library in the "Green Point".',
         'SKILLS_backend_content_6': ' • Has nearly three years of full-end development experience.',
-        'SKILLS_others_content_1': 'SQL Server/Postgres/My SQL/SQLite.',
-        'SKILLS_others_content_2': 'Git/SVN.',
+        'SKILLS_others_content_1': 'Git/SVN。',
+        'SKILLS_others_content_2': 'SQL Server/Postgres/SQLite。',
         'SKILLS_others_content_3': ' • Has the concept and experience of Scrum.',
         'SKILLS_others_content_4': ' • Has the concept of database normalization,SQL instructions.',
         'SKILLS_others_content_5': ' • Has version control Experience.',
@@ -57,6 +57,7 @@ var arrLang = {
         'CONTACT_thx_info_content_1': 'There is no end to the design road. In the future,I will be more sophisticated. If you like my creation or have related questions,please feel free to contact me. Have a good  day.',
         'CONTACT_thx_info_content_2': 'Have a good day.',
         'CONTACT_thx_info_signature': '-Kevin Lin.',
+        'READ_MORE':'Read More'
     },
     'zh-tw': {
         'Itme_HOME': '首頁',
@@ -70,8 +71,8 @@ var arrLang = {
         'PROFILE_Education_title': '學歷',
         'PROFILE_Experience_title': '經歷',
         'PROFILE_Education1': ' • 大葉大學資訊工程系',
-        'PROFILE_Personality_1': '對學習和編程充滿熱情。',
-        'PROFILE_Personality_2': '樂於接受挑戰。',
+        'PROFILE_AboutMe': '自從接觸了程式設計開始，我便喜歡上於程式設計，即便在工作之餘，我也會去寫寫代碼。我同時學習了前端及後端的程式語言，試圖成為一名全端工程師，但相較於後端我更喜歡前端設計。除了程式設計，我喜歡畫畫，甚至開始學習美術設計，我喜歡推理，不管是小說或謎題，朋友也說過我擅長邏輯推理。',
+        'PROFILE_Statement': '樂於接受挑戰。',
         'PROFILE_Personality_3': '喜愛設計以及解決問題。',
         'RESUME_Experience_1': ' • 捷普綠點擔任「實習工程師」。2015年7月-2016年6月',
         'RESUME_Experience_2': ' • 捷普綠點擔任「全端工程師」。2016年7月-2016年11月',
@@ -92,8 +93,8 @@ var arrLang = {
         'SKILLS_backend_content_4': ' • 具有物件導向、架設站台之觀念。',
         'SKILLS_backend_content_5': ' • 曾在綠點使用KEYENCE之library編寫PLC讀寫程式。',
         'SKILLS_backend_content_6': ' • 擁有近三年全端開發經驗。',
-        'SKILLS_others_content_1': 'SQL Server/Postgres/My SQL/SQLite。',
-        'SKILLS_others_content_2': 'Git/SVN。',
+        'SKILLS_others_content_1': 'Git/SVN。',
+        'SKILLS_others_content_2': 'SQL Server/Postgres/SQLite。',
         'SKILLS_others_content_3': ' • 具有Scrum之觀念和經驗。',
         'SKILLS_others_content_4': ' • 具有資料庫正規化、SQL指令之觀念。',
         'SKILLS_others_content_5': ' • 具有版本控管之經驗。',
@@ -116,6 +117,7 @@ var arrLang = {
         'CONTACT_thx_info_content_1': '設計的路上沒有盡頭，未來我會更加精進自己實力，如果你喜歡我的作品，或者有相關問題，都歡迎與我聯繫。',
         'CONTACT_thx_info_content_2': '祝您有愉快的一天。',
         'CONTACT_thx_info_signature': '-林建成',
+        'READ_MORE':'更多資訊'
     }
 };
 

@@ -38,12 +38,12 @@
         </nav>
     </div>
     <section id='page0'>
-        <video autoplay loop poster="image/coding.png">
+        <video autoplay loop>
             <source src="image/coding.webm" type="video/webm">
         </video>
         <div class='web-title'>
             <h1>RESUME</h1>
-            <h2>&raquo;I AM KEVIN LIN.</h2>
+            <h2>&raquo;HI! I AM KEVIN LIN.</h2>
             <h2>&raquo;I LIKE DESIGN.</h2>
             <h2>&raquo;I LIKE PROGRAM.</h2>
             <h2>&raquo;HELLO WORLD!</h2>
@@ -57,11 +57,11 @@
         <div class='profile-education'>
             <h1 class='title lang' data-key="Itme_PROFILE"></h1>
             <div>
-                <i class="fa fa-graduation-cap fa-2x" style="color: rgba(102, 49, 124,0.8)"></i>
+                <sapn class="fa fa-graduation-cap fa-2x" style="color: rgba(242,242,242,1)"></sapn>
                 <h2 class='lang' data-key="PROFILE_Education_title"></h2>
                 <p class='lang' data-key="PROFILE_Education1"></p>
                 <br>
-                <i class="fa fa-star fa-2x" style="color: rgba(102, 49, 124,0.8)"></i>
+                <i class="fa fa-star fa-2x" style="color: rgba(242,242,242,1)"></i>
                 <h2 class='lang' data-key="PROFILE_Experience_title"></h2>
                 <p class='lang' data-key='RESUME_Experience_1'></p>
                 <p class='lang' data-key='RESUME_Experience_2'></p>
@@ -71,18 +71,17 @@
         </div>
         <div class='profile-info'>
             <div>
-                <h1 class='lang' data-key="PROFILE_Hi" style=''></h1>
-                <h1 class='lang' data-key="PROFILE_myName"></h1>
-                <h3 class='lang' data-key="PROFILE_Saying"></h3>
-                <br class='Web-display'>
-                <h2 class='lang' data-key='PROFILE_Personality_1'></h2>
-                <h2 class='lang' data-key='PROFILE_Personality_2'></h2>
-                <h2 class='lang' data-key='PROFILE_Personality_3'></h2>
+                <!-- <h1 class='lang' data-key="PROFILE_Hi" style=''></h1> -->
+                <!-- <h1 class='lang' data-key="PROFILE_myName"></h1> -->
+                <!-- <h3 class='lang' data-key="PROFILE_Saying"></h3> -->
+                <p class='lang' data-key='PROFILE_AboutMe'></p>
+                <!-- <h2 class='lang' data-key='PROFILE_Personality_2'></h2> -->
+                <!-- <h2 class='lang' data-key='PROFILE_Personality_3'></h2> -->
             </div>
         </div>
         <div class='profile-statement'>
             <div>
-                
+                <p class='lang' data-key='PROFILE_Statement'></p>
             </div>
         </div>
     </section>
@@ -94,8 +93,8 @@
             <div class="expanded-box">
                 <div class="expanded-switch"></div>
                 <div class="expanded-content">
-                    <div class='skill-img' style='background: url(image/front-end.jpg);'>
-                    </div>
+                    <div class='content-title lang' data-key='SKILLS_frontend'></div>
+                    <div class='skill-img' style='background: url(image/front-end.jpg);'></div>
                     <div class='skill-content'>
                         <p class='lang' data-key='SKILLS_frontend_content_1'></p>
                         <p class='lang' data-key='SKILLS_frontend_content_2'></p>
@@ -104,15 +103,15 @@
                         <p class='lang' data-key='SKILLS_frontend_content_4'></p>
                         <p class='lang' data-key='SKILLS_frontend_content_5'></p>
                         <p class='lang' data-key='SKILLS_frontend_content_6'></p>
-                        <div class="expanded-button button from-middle">Read Mroe</div>
+                        <div class="expanded-button skill-button lang" data-key='READ_MORE'></div>
                     </div>
                 </div>
             </div>
             <div class="expanded-box">
                 <div class="expanded-switch"></div>
                 <div class="expanded-content">
-                    <div class='skill-img' style='background: url(image/back-end.jpg);'>
-                    </div>
+                    <div class='content-title lang' data-key='SKILLS_backend'></div>
+                    <div class='skill-img' style='background: url(image/back-end.jpg);'></div>
                     <div class='skill-content'>
                         <p class='lang' data-key='SKILLS_backend_content_1'></p>
                         <p class='lang' data-key='SKILLS_backend_content_2'></p>
@@ -121,15 +120,15 @@
                         <p class='lang' data-key='SKILLS_backend_content_4'></p>
                         <p class='lang' data-key='SKILLS_backend_content_5'></p>
                         <p class='lang' data-key='SKILLS_backend_content_6'></p>
-                        <div class="expanded-button button from-middle">Read Mroe</div>
+                        <div class="expanded-button skill-button lang" data-key='READ_MORE'></div>
                     </div>
                 </div>
             </div>
             <div class="expanded-box">
                 <div class="expanded-switch"></div>
                 <div class="expanded-content">
-                    <div class='skill-img' style='background: url(image/others.jpg);'>
-                    </div>
+                    <div class='content-title lang' data-key='SKILLS_others'></div>
+                    <div class='skill-img' style='background: url(image/others.jpg);'></div>
                     <div class='skill-content'>
                         <p class='lang' data-key='SKILLS_others_content_1'></p>
                         <p class='lang' data-key='SKILLS_others_content_2'></p>
@@ -138,7 +137,7 @@
                         <p class='lang' data-key='SKILLS_others_content_4'></p>
                         <p class='lang' data-key='SKILLS_others_content_5'></p>
                         <p class='lang' data-key='SKILLS_others_content_6'></p>
-                        <div class="expanded-button button from-middle">Read Mroe</div>
+                        <div class="expanded-button skill-button lang" data-key='READ_MORE'></div>
                     </div>
                 </div>
             </div>
@@ -150,70 +149,55 @@
         </div>
         <div class='protfolio-item-box'>
             <div id="protfolio_carousel" class="carousel slide">
-                <ul class="carousel-indicators">
-                </ul>
+                <ul class="carousel-indicators"></ul>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="protfolio-img" style='background: url(image/protfolio-resume.png)'></div>
-                        <div class="info">
-                            <div class="info-back">
-                                <h3 class='lang' data-key='PORTFOLIO_item_title_1'></h3>
-                                <p class='lang' data-key='PORTFOLIO_item_description_1'></p>
-                            </div>
+                        <div class="protfolio-info">
+                            <h3 class='lang' data-key='PORTFOLIO_item_title_1'></h3>
+                            <p class='lang' data-key='PORTFOLIO_item_description_1'></p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="protfolio-img" style='background: url(image/web-crawler.jpg)'></div>
-                        <div class="info">
-                            <div class="info-back">
-                                <h3 class='lang' data-key='PORTFOLIO_item_title_2'></h3>
-                                <p class='lang' data-key='PORTFOLIO_item_description_2'></p>
-                            </div>
+                        <div class="protfolio-info">
+                            <h3 class='lang' data-key='PORTFOLIO_item_title_2'></h3>
+                            <p class='lang' data-key='PORTFOLIO_item_description_2'></p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="protfolio-img" style='background: url(image/DataGenerator.jpg)'></div>
-                        <div class="info">
-                            <div class="info-back">
-                                <h3 class='lang' data-key='PORTFOLIO_item_title_3'></h3>
-                                <p class='lang' data-key='PORTFOLIO_item_description_3'></p>
-                            </div>
+                        <div class="protfolio-info">
+                            <h3 class='lang' data-key='PORTFOLIO_item_title_3'></h3>
+                            <p class='lang' data-key='PORTFOLIO_item_description_3'></p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="protfolio-img" style='background: url(image/protfolio-arm.png)'></div>
-                        <div class="info">
-                            <div class="info-back">
-                                <h3 class='lang' data-key='PORTFOLIO_item_title_4'></h3>
-                                <p class='lang' data-key='PORTFOLIO_item_description_4'></p>
-                            </div>
+                        <div class="protfolio-info">
+                            <h3 class='lang' data-key='PORTFOLIO_item_title_4'></h3>
+                            <p class='lang' data-key='PORTFOLIO_item_description_4'></p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="protfolio-img" style='background: url(image/forum.jpg)'></div>
-                        <div class="info">
-                            <div class="info-back">
-                                <h3 class='lang' data-key='PORTFOLIO_item_title_5'></h3>
-                                <p class='lang' data-key='PORTFOLIO_item_description_5'></p>
-                            </div>
+                        <div class="protfolio-info">
+                            <h3 class='lang' data-key='PORTFOLIO_item_title_5'></h3>
+                            <p class='lang' data-key='PORTFOLIO_item_description_5'></p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="protfolio-img" style='background: url(image/dashbord.png)'></div>
-                        <div class="info">
-                            <div class="info-back">
-                                <h3 class='lang' data-key='PORTFOLIO_item_title_6'></h3>
-                                <p class='lang' data-key='PORTFOLIO_item_description_6'></p>
-                            </div>
+                        <div class="protfolio-info">
+                            <h3 class='lang' data-key='PORTFOLIO_item_title_6'></h3>
+                            <p class='lang' data-key='PORTFOLIO_item_description_6'></p>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="protfolio-img" style='background: url(image/mypackage.jpg)'></div>
-                        <div class="info">
-                            <div class="info-back">
-                                <h3 class='lang' data-key='PORTFOLIO_item_title_7'></h3>
-                                <p class='lang' data-key='PORTFOLIO_item_description_7'></p>
-                            </div>
+                        <div class="protfolio-info">
+                            <h3 class='lang' data-key='PORTFOLIO_item_title_7'></h3>
+                            <p class='lang' data-key='PORTFOLIO_item_description_7'></p>
                         </div>
                     </div>
                 </div>
@@ -223,7 +207,7 @@
                 <a class="carousel-control-next remove-bootstrap-carousel-control" href="#protfolio_carousel" data-slide="next">
                     <span class="carousel-control-next-icon"></span>
                 </a>
-            </div>            
+            </div>
         </div>
     </section>
     <section id='page4'>
@@ -233,7 +217,7 @@
                 <input type="text" name="name" placeholder="Your Name">
                 <input type="email" name="_replyto" placeholder="Your Email">
                 <textarea name="content" placeholder="Message..."></textarea>
-                <input type="submit" value="Send" class='button from-middle lang' style="width: 200px;">
+                <input type="submit" value="Send" class='lang' style="width: 200px;">
             </form>
         </div>
         <div class="thx-box">
@@ -254,7 +238,7 @@
     </section>
 </body>
 <script type="text/javascript">
-$(document).ready(function() {    
+$(document).ready(function() {
     var language = getCookie("language");
     if (language == null || language == "") {
         language = "zh-tw";
@@ -272,7 +256,6 @@ $(document).ready(function() {
     });
 
 });
-
 </script>
 
 </html>
