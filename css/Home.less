@@ -3,7 +3,7 @@
 @import "desktop.less"screen and (min-width: 768px);
 
 @dark-color: rgb(47, 51, 58);
-@white-color: rgb(242, 242, 242);
+@white-color: #f1e1ff;
 @theme-color: rgb(102, 49, 124);
 
 .less-transform(@deg) {
@@ -94,11 +94,11 @@ body {
 }
 
 .carousel-control-prev-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#A76285' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='#A76285' viewBox='0 0 8 8'><path d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/></svg>");
 }
 
 .carousel-control-next-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='#A76285' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' fill='#A76285' viewBox='0 0 8 8'><path d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/></svg>");
 }
 
 .remove-bootstrap-carousel-control {
@@ -110,27 +110,32 @@ body {
     width: 40px;
 }
 
-.carousel-caption>h3 {
-    color: #444;
-}
-
 .carousel-indicators {
+    li {
+        background: @theme-color;
+        height: 0.8em;
+        width: 0.8em;
+        border-radius: 100%;
+        opacity: 0.2;
+    }
+
     .active {
         background: @theme-color;
+        opacity: 1;
     }
 }
 
 .animation-text-show {
     position: relative;
     overflow: hidden;
-    animation: text-show 5s;
+    animation: text-show 4s;
     opacity: 1;
-    display: block;
+    display: block !important;
 }
 
 .animation-text-show:after {
     background-color: @theme-color;
-    display: block;
+    display: block !important;
     opacity: 1;
     content: "";
     position: absolute;
@@ -148,7 +153,7 @@ body {
     }
 
     50% {
-        opacity: 0.7;
+        opacity: 0.9;
     }
 
     100% {
@@ -162,7 +167,7 @@ body {
     }
 
     50% {
-        opacity: 0.7;
+        opacity: 0.9;
     }
 
     100% {

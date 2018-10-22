@@ -23,7 +23,7 @@ section {
     width: 100%;
     background-attachment: fixed;
     overflow: hidden;
-    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.1) 0%, rgba(102, 49, 124, 0.1) 80%, rgba(102, 49, 124, 0.2) 100%);
+    background: radial-gradient(ellipse at center, rgba(235, 236, 23, 0.1) 0%, rgba(102, 49, 124, 0.1) 80%, rgba(102, 49, 124, 0.2) 100%);
 }
 
 // #page1 {
@@ -56,7 +56,7 @@ h3 {
 }
 
 .web-title {
-    background: linear-gradient(45deg, rgba(102, 49, 124, 0) 0%, rgba(102, 49, 124, 0.3) 60%, rgba(102, 49, 124, 1) 90%);
+    // background: linear-gradient(45deg, rgba(102, 49, 124, 0) 0%, rgba(102, 49, 124, 0.3) 60%, rgba(102, 49, 124, 1) 90%);
     position: absolute;
     top: 0%;
     left: 0%;
@@ -68,20 +68,23 @@ h3 {
         position: relative;
         border: none;
         font-size: 4em;
-        top: 0;
+        top: 50%;
         left: 50%;
+
         border-bottom: 2px solid @theme-color;
-        .less-transform(330deg);
+        // .less-transform(330deg);
         animation: h1-enter 1s;
+        // animation-fill-mode: forwards;
+
     }
 
     h2 {
         background-color: rgba(255, 255, 255, 0.8);
         position: relative;
         left: 100%;
-        margin-top: 8px;
+        // margin-top: 8px;
         border-bottom: 2px solid @theme-color;
-        .less-transform(330deg);
+        // .less-transform(330deg);
     }
 
     h2:nth-child(2) {
@@ -111,41 +114,38 @@ h3 {
 
 .profile-education {
     height: 90%;
-    width: 50%;
+    width: 30%;
     float: left;
     padding: 5%;
-    display: none;
-    font-size: 16px;
 
     >div {
         height: 95%;
         width: 100%;
-        padding: 5%;
+        padding: 3%;
         margin-top: 5%;
         .less-box-shadow(12px 8px 4px 1px rgba(47, 51, 58, 0.2));
-        border: 8px solid rgba(255, 255, 255, 0.2);
-        background: rgba(102, 49, 124, 0.5);
-        color: @white-color;
+        background: rgba(235, 236, 239, 0.9);
+        // color: @white-color;
+        display: none;
     }
 }
 
 .profile-info {
-    height: 50%;
-    width: 50%;
-    color: rgb(255, 255, 255);
+    height: 40%;
+    width: 70%;
     float: right;
-    display: none;
-    padding: 5% 5% 0% 0%;
+    padding: 3% 5% 0% 0%;
 
     >div {
 
         height: 100%;
         width: 100%;
-        padding: 5%;
+        padding: 3%;
         .less-box-shadow(12px 8px 4px 1px rgba(47, 51, 58, 0.2));
-        border: 8px solid rgba(255, 255, 255, 0.2);
-        background: rgba(102, 49, 124, 0.5);
-        color: @white-color;
+        background: rgba(235, 236, 239, 0.9);
+        // color: @white-color;
+
+        display: none;
     }
 
     p {
@@ -154,21 +154,25 @@ h3 {
 }
 
 .profile-statement {
-    height: 50%;
-    width: 50%;
+    height: 60%;
+    width: 70%;
     float: right;
     padding: 1% 5% 5% 0%;
-    display: none;
 
     >div {
         height: 100%;
         width: 100%;
-        padding: 5%;
+        padding: 3%;
         .less-box-shadow(12px 8px 4px 1px rgba(47, 51, 58, 0.2));
-        border: 8px solid rgba(255, 255, 255, 0.2);
-        background: rgba(102, 49, 124, 0.5);
-        color: @white-color;
+        background: rgba(235, 236, 239, 0.9);
+        // color: @white-color;
+
+        display: none;
     }
+
+    h2 {
+    border-left: 4px solid @theme-color;
+        }
 
     p {
         font-size: 1em;
@@ -184,7 +188,9 @@ h3 {
 }
 
 .wave {
-    background: url(../image/wave.svg) repeat-x;
+    // background: url(../image/wave.svg) repeat-x;
+    background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1600' height='198'><defs><linearGradient id='a' x1='50%' x2='50%' y1='-10.959%' y2='100%'><stop stop-color='#66317C' stop-opacity='.25' offset='0%'/><stop stop-color='#66317C' offset='100%'/></linearGradient></defs><path fill='url(#a)' fill-rule='evenodd' d='M.005 121C311 121 409.898-.25 811 0c400 0 500 121 789 121v77H0s.005-48 .005-77z' transform='matrix(-1 0 0 1 1600 0)'/></svg>");
+    background-repeat: repeat-x;
     position: absolute;
     top: -198px;
     width: 6400px;
@@ -608,6 +614,8 @@ h3 {
     float: left;
     height: 80%;
     padding: 0% 5%;
+    background: radial-gradient(ellipse at center, rgba(102, 49, 124, 1) 0%, rgba(102, 49, 124, 0.9) 90%, rgba(102, 49, 124, 0.8) 100%);
+    
 }
 
 .thx-box p {
@@ -618,7 +626,7 @@ h3 {
 .footer-box {
     float: left;
     color: rgb(210, 212, 213);
-    background: radial-gradient(ellipse at center, rgba(102, 49, 124, 1) 0%, rgba(102, 49, 124, 0.9) 90%, rgba(102, 49, 124, 0.8) 100%);
+    // background: radial-gradient(ellipse at center, rgba(102, 49, 124, 1) 0%, rgba(102, 49, 124, 0.9) 90%, rgba(102, 49, 124, 0.8) 100%);
     width: 100%;
     height: 20%;
     padding: 5px 25px;

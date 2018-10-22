@@ -39,9 +39,9 @@ $(window).scroll(function() {
     else if ($(this).scrollTop() >= x1 * 0.8 && $(this).scrollTop() <=x2)
     {
         // console.log("page1");
-        $('.profile-education')[0].classList.add('animation-text-show');
-        setTimeout(function() {$('.profile-info')[0].classList.add('animation-text-show');}, 800);
-        setTimeout(function() {$('.profile-statement')[0].classList.add('animation-text-show');}, 1600);
+        $('.profile-education>div')[0].classList.add('animation-text-show');
+        setTimeout(function() {$('.profile-info>div')[0].classList.add('animation-text-show');}, 600);
+        setTimeout(function() {$('.profile-statement>div')[0].classList.add('animation-text-show');}, 1200);
     }
     else if ($(this).scrollTop() >= x2 && $(this).scrollTop() <=x3)
     {
@@ -89,7 +89,7 @@ $(function() {
     })
 });
 
-//定義輪播
+//設定bootstrap輪播
 $(function() {
     var li = "";
     var total = $('.carousel .carousel-inner div.carousel-item').size();
