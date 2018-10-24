@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <div class="sliding-menu ver2">
+    <div id='home_menu' class="sliding-menu ver2">
         <nav>
             <ul>
                 <li data-menuanchor="page1"><a class='lang' data-key="Itme_PROFILE" href="#page1"></a></li>
@@ -41,7 +41,9 @@
             <source src="image/coding.webm" type="video/webm">
         </video> -->
         <div class='web-title'>
-            <h1>RESUME</h1>
+            <div class="has-animation animation" data-delay="100">
+                <h1>MY RESUME</h1>
+            </div>
             <h2>&raquo;HI! I AM KEVIN LIN.</h2>
             <h2>&raquo;I LIKE DESIGN.</h2>
             <h2>&raquo;I LIKE PROGRAM.</h2>
@@ -53,23 +55,20 @@
             <div class="wave"></div>
             <div class="wave"></div>
         </div>
-        <div class='profile-education'>
+        <!-- <div class='profile-title'>
+            
+        </div> -->
+        <div class='profile-info'>
             <h1 class='title lang' data-key="Itme_PROFILE"></h1>
             <div>
-                <!--  <sapn class="fa fa-graduation-cap fa-2x" style="color: rgba(242,242,242,1)"></sapn>
-                <h2 class='lang' data-key="PROFILE_Education_title"></h2>
-                <p class='lang' data-key="PROFILE_Education1"></p>
-                <br>
-                <i class="fa fa-star fa-2x" style="color: rgba(242,242,242,1)"></i>
-                <h2 class='lang' data-key="PROFILE_Experience_title"></h2>
-                <p class='lang' data-key='RESUME_Experience_1'></p>
-                <p class='lang' data-key='RESUME_Experience_2'></p>
-                <p class='lang' data-key='RESUME_Experience_3'></p>
-                <p class='lang' data-key='RESUME_Experience_4'></p> -->
+                <div class='profile-photo'></div>
+                <h2 class='lang' data-key="PROFILE_Hi"></h2>
+                <h3 class='lang' data-key="PROFILE_Saying"></h3>
             </div>
         </div>
-        <div class='profile-info'>
+        <div class='profile-about'>
             <div>
+                <h1 class='lang' data-key='PROFILE_About_title'></h1>
                 <!-- <h1 class='lang' data-key="PROFILE_Hi" style=''></h1> -->
                 <!-- <h1 class='lang' data-key="PROFILE_myName"></h1> -->
                 <!-- <h3 class='lang' data-key="PROFILE_Saying"></h3> -->
@@ -78,8 +77,10 @@
                 <!-- <h2 class='lang' data-key='PROFILE_Personality_3'></h2> -->
             </div>
         </div>
-        <div class='profile-statement'>
+        <div class='profile-education'>
             <div>
+                <!-- <h1 class='lang' data-key='profile_education_title'>ABOUT ME</h1> -->
+                <!-- <h1>EDUCATION</h1> -->
                 <h2 class='lang' data-key="PROFILE_Education_title"></h2>
                 <p class='lang' data-key="PROFILE_Education1"></p>
                 <br>
@@ -162,48 +163,40 @@
                         <div class="protfolio-info">
                             <h3 class='lang' data-key='PORTFOLIO_item_title_1'></h3>
                             <p class='lang' data-key='PORTFOLIO_item_description_1'></p>
+                            <a class='lang my-button-2 lang' data-key='READ_MORE' style="width: 100px;"></a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="protfolio-img" style='background: url(image/marry.png)'></div>
+                        <div class="protfolio-info">
+                            <h3 class='lang' data-key='PORTFOLIO_item_title_2'></h3>
+                            <p class='lang' data-key='PORTFOLIO_item_description_2'></p>
+                            <a class='lang my-button-2 lang' data-key='READ_MORE' style="width: 100px;"></a>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                         <div class="protfolio-img" style='background: url(image/DataGenerator.jpg)'></div>
+                        <div class="protfolio-info">
+                            <h3 class='lang' data-key='PORTFOLIO_item_title_3'></h3>
+                            <p class='lang' data-key='PORTFOLIO_item_description_3'></p>
+                            <a class='lang my-button-2 lang' data-key='READ_MORE' style="width: 100px;"></a>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="protfolio-img" style='background: url(image/web-crawler.jpg)'></div>
-                        <div class="protfolio-info">
-                            <h3 class='lang' data-key='PORTFOLIO_item_title_2'></h3>
-                            <p class='lang' data-key='PORTFOLIO_item_description_2'></p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="protfolio-img" style='background: url(image/DataGenerator.jpg)'></div>
-                        <div class="protfolio-info">
-                            <h3 class='lang' data-key='PORTFOLIO_item_title_3'></h3>
-                            <p class='lang' data-key='PORTFOLIO_item_description_3'></p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="protfolio-img" style='background: url(image/protfolio-arm.png)'></div>
+                       
                         <div class="protfolio-info">
                             <h3 class='lang' data-key='PORTFOLIO_item_title_4'></h3>
                             <p class='lang' data-key='PORTFOLIO_item_description_4'></p>
+                            <a class='lang my-button-2 lang' data-key='READ_MORE' style="width: 100px;"></a>
                         </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="protfolio-img" style='background: url(image/forum.jpg)'></div>
-                        <div class="protfolio-info">
-                            <h3 class='lang' data-key='PORTFOLIO_item_title_5'></h3>
-                            <p class='lang' data-key='PORTFOLIO_item_description_5'></p>
-                        </div>
-                    </div>
-                    <div class="carousel-item">
-                        <div class="protfolio-img" style='background: url(image/dashbord.png)'></div>
-                        <div class="protfolio-info">
-                            <h3 class='lang' data-key='PORTFOLIO_item_title_6'></h3>
-                            <p class='lang' data-key='PORTFOLIO_item_description_6'></p>
-                        </div>
-                    </div>
+                    </div>                    
                     <div class="carousel-item">
                         <div class="protfolio-img" style='background: url(image/mypackage.jpg)'></div>
                         <div class="protfolio-info">
-                            <h3 class='lang' data-key='PORTFOLIO_item_title_7'></h3>
-                            <p class='lang' data-key='PORTFOLIO_item_description_7'></p>
+                            <h3 class='lang' data-key='PORTFOLIO_item_title_5'></h3>
+                            <p class='lang' data-key='PORTFOLIO_item_description_5'></p>
+                            <a class='lang my-button-2 lang' data-key='READ_MORE' style="width: 100px;"></a>
                         </div>
                     </div>
                 </div>
@@ -219,27 +212,28 @@
     <section id='page4'>
         <div class='communicate-box'>
             <h1 class='title lang' data-key='Itme_CONTACT'></h1>
-            <form action="https://formspree.io/sasuke01260616@gmail.com" method="POST">
+            <form id='mail_form' action="https://formspree.io/sasuke01260616@gmail.com" method="POST">
                 <input type="text" name="name" placeholder="Your Name">
                 <input type="email" name="_replyto" placeholder="Your Email">
                 <textarea name="content" placeholder="Message..."></textarea>
-                <input type="submit" value="Send" class='lang' style="width: 200px;">
+                <div class='lang my-button' data-key='send_button' onclick="send_mail()" style="width: 150px;"></div>
             </form>
         </div>
         <div class="thx-box">
-            <h1 class='lang' data-key='CONTACT_thx_info_title'></h1>
-            <p class='lang' data-key='CONTACT_thx_info_content_1'></p>
-            <p class='lang' data-key='CONTACT_thx_info_content_2'></p>
-            <p class='lang' data-key='CONTACT_thx_info_signature'></p>
-        </div>
-        <div class="footer-box">
-            <div class="fa fa-envelope fa-2x icon-2x"></div>
-            <span>：sasuke01260616@gmail.com</span>
-            <br>
-            <div class="fa fa-phone-square fa-2x icon-2x"></div>
-            <span>：+886 0988-612-516</span>
-            <br>
-            <p>Copyright © Kevin Lin 2018</p>
+            <div>
+                <p class='lang' data-key='CONTACT_thx_info_content_1'></p>
+                <p class='lang' data-key='CONTACT_thx_info_content_2'></p>
+                <p class='lang' data-key='CONTACT_thx_info_signature'></p>
+            </div>
+            <div>
+                <a class="fa fa-envelope-o fa-3x" href="mailto:sasuke01260616@gmail.com"></a>
+                <!-- <br> -->
+                <a class="fa fa-codepen fa-3x" href="https://github.com/Berglas" target="_blank"></a>
+                <!-- <br> -->
+                <a class="fa fa-github fa-3x" href="https://github.com/Berglas" target="_blank"></a>
+                <!-- <br> -->
+            </div>
+            <h2>Copyright © Kevin Lin 2018</h2>
         </div>
     </section>
 </body>

@@ -31,20 +31,16 @@ $(window).scroll(function() {
     var x = $('#page0').offset().top;
     var x1 = $('#page1').offset().top;
     var x2 = $('#page2').offset().top;
-    var x3= $('#page3').offset().top;
-    if ($(this).scrollTop() >= x && $(this).scrollTop() <=x1 * 0.8)
-    {
-        //$('.profile-education')[0].classList.add('animation-text-show');
-    }
-    else if ($(this).scrollTop() >= x1 * 0.8 && $(this).scrollTop() <=x2)
-    {
+    var x3 = $('#page3').offset().top;
+    if ($(this).scrollTop() >= x && $(this).scrollTop() <= x1 * 0.8) {
+        // $('#home_menu')[0].classList.remove('show-bg');
+    } else if ($(this).scrollTop() >= x1 * 0.8 && $(this).scrollTop() <= x2) {
         // console.log("page1");
-        $('.profile-education>div')[0].classList.add('animation-text-show');
-        setTimeout(function() {$('.profile-info>div')[0].classList.add('animation-text-show');}, 600);
-        setTimeout(function() {$('.profile-statement>div')[0].classList.add('animation-text-show');}, 1200);
-    }
-    else if ($(this).scrollTop() >= x2 && $(this).scrollTop() <=x3)
-    {
+        // $('#home_menu')[0].classList.add('hide-bg');
+        $('.profile-info>div')[0].classList.add('animation-text-show');
+        setTimeout(function() { $('.profile-about>div')[0].classList.add('animation-text-show'); }, 600);
+        setTimeout(function() { $('.profile-education>div')[0].classList.add('animation-text-show'); }, 1200);
+    } else if ($(this).scrollTop() >= x2 && $(this).scrollTop() <= x3) {
         // console.log("page2");
     }
 
@@ -110,3 +106,20 @@ $(function() {
         interval: false
     });
 });
+
+//
+$(function() {
+    $('.has-animation').each(function(index) {
+        $(this).delay($(this).data('delay')).queue(function() {
+            $(this).addClass('animate-in');
+        });
+    });
+});
+
+//傳送mail表單
+function send_mail() {
+    if (confirm("確認送出?")) {
+        $('#mail_form').submit();
+    } else {}
+
+}
