@@ -107,7 +107,7 @@ $(function() {
     });
 });
 
-//
+//初始化has-animation
 $(function() {
     $('.has-animation').each(function(index) {
         $(this).delay($(this).data('delay')).queue(function() {
@@ -123,3 +123,12 @@ function send_mail() {
     } else {}
 
 }
+
+//初始化sliding-menu
+$(function() {
+    $('.sliding-menu').append("<div class='menu-icon'><span></span></div>");
+    $('.menu-icon').on('click', function() {
+        $(".menu-icon")[0].classList.toggle("active");
+        $(".sliding-menu>nav")[0].classList.toggle("active");
+    })
+});

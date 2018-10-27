@@ -12,11 +12,8 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="css/sliding-menu.css" />
-    <script type="text/javascript" src="js/sliding-menu.js"></script>
-    <script type="text/javascript" src="js/myElement.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/myElement.css" />
-    <link rel="stylesheet/less" type="text/css" href="css/Home.less?{{.Version}}" />
-    <script type="text/javascript" src="js/Home.js?{{.Version}}"></script>
+    <link rel="stylesheet/less" type="text/css" href="css/Home.less" />
+    <script type="text/javascript" src="js/Home.js"></script>
     <script type="text/javascript" src="js/translate.js"></script>
     <script type="text/javascript" src="js/less.min.js"></script>
     </style>
@@ -49,15 +46,20 @@
             <h2>&raquo;I LIKE PROGRAM.</h2>
             <h2>&raquo;HELLO WORLD!</h2>
         </div>
+        <div class='scroll-button'>
+            <a href="#page1"></a>
+            <svg fill="#fff" viewBox="0 0 40 40">
+                <g>
+                    <path d="m31 16.4q0 0.3-0.2 0.5l-10.4 10.4q-0.3 0.3-0.5 0.3t-0.6-0.3l-10.4-10.4q-0.2-0.2-0.2-0.5t0.2-0.5l1.2-1.1q0.2-0.2 0.5-0.2t0.5 0.2l8.8 8.8 8.7-8.8q0.3-0.2 0.5-0.2t0.6 0.2l1.1 1.1q0.2 0.2 0.2 0.5z"></path>
+                </g>
+            </svg>
+        </div>
     </section>
     <section id='page1'>
         <div class="wave-box">
             <div class="wave"></div>
             <div class="wave"></div>
         </div>
-        <!-- <div class='profile-title'>
-            
-        </div> -->
         <div class='profile-info'>
             <h1 class='title lang' data-key="Itme_PROFILE"></h1>
             <div>
@@ -69,18 +71,11 @@
         <div class='profile-about'>
             <div>
                 <h1 class='lang' data-key='PROFILE_About_title'></h1>
-                <!-- <h1 class='lang' data-key="PROFILE_Hi" style=''></h1> -->
-                <!-- <h1 class='lang' data-key="PROFILE_myName"></h1> -->
-                <!-- <h3 class='lang' data-key="PROFILE_Saying"></h3> -->
                 <p class='lang' data-key='PROFILE_AboutMe'></p>
-                <!-- <h2 class='lang' data-key='PROFILE_Personality_2'></h2> -->
-                <!-- <h2 class='lang' data-key='PROFILE_Personality_3'></h2> -->
             </div>
         </div>
         <div class='profile-education'>
-            <div>
-                <!-- <h1 class='lang' data-key='profile_education_title'>ABOUT ME</h1> -->
-                <!-- <h1>EDUCATION</h1> -->
+            <div>               
                 <h2 class='lang' data-key="PROFILE_Education_title"></h2>
                 <p class='lang' data-key="PROFILE_Education1"></p>
                 <br>
@@ -110,6 +105,7 @@
                         <p class='lang' data-key='SKILLS_frontend_content_4'></p>
                         <p class='lang' data-key='SKILLS_frontend_content_5'></p>
                         <p class='lang' data-key='SKILLS_frontend_content_6'></p>
+                        <p class='lang' data-key='SKILLS_frontend_content_7'></p>
                         <div class="expanded-button skill-button lang" data-key='READ_MORE'></div>
                     </div>
                 </div>
@@ -163,7 +159,7 @@
                         <div class="protfolio-info">
                             <h3 class='lang' data-key='PORTFOLIO_item_title_1'></h3>
                             <p class='lang' data-key='PORTFOLIO_item_description_1'></p>
-                            <a class='lang my-button-2 lang' data-key='READ_MORE' style="width: 100px;"></a>
+                            <div class='lang my-button-2 lang' data-key='READ_MORE' style="width: 120px;" onclick="window.open('https://github.com/Berglas/my-resume-heroku')"></div>
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -171,32 +167,31 @@
                         <div class="protfolio-info">
                             <h3 class='lang' data-key='PORTFOLIO_item_title_2'></h3>
                             <p class='lang' data-key='PORTFOLIO_item_description_2'></p>
-                            <a class='lang my-button-2 lang' data-key='READ_MORE' style="width: 100px;"></a>
+                            <div class='lang my-button-2 lang' data-key='READ_MORE' style="width: 120px;" onclick="window.open('https://berglas-resume-two.herokuapp.com/game')"></div>
                         </div>
                     </div>
                     <div class="carousel-item">
-                         <div class="protfolio-img" style='background: url(image/DataGenerator.jpg)'></div>
+                        <div class="protfolio-img" style='background: url(image/DataGenerator.jpg)'></div>
                         <div class="protfolio-info">
                             <h3 class='lang' data-key='PORTFOLIO_item_title_3'></h3>
                             <p class='lang' data-key='PORTFOLIO_item_description_3'></p>
-                            <a class='lang my-button-2 lang' data-key='READ_MORE' style="width: 100px;"></a>
+                            <div class='lang my-button-2 lang' data-key='READ_MORE' style="width: 120px;" onclick="window.open('https://github.com/Berglas/DataGenerator')"></div>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <div class="protfolio-img" style='background: url(image/web-crawler.jpg)'></div>
-                       
                         <div class="protfolio-info">
                             <h3 class='lang' data-key='PORTFOLIO_item_title_4'></h3>
                             <p class='lang' data-key='PORTFOLIO_item_description_4'></p>
-                            <a class='lang my-button-2 lang' data-key='READ_MORE' style="width: 100px;"></a>
+                            <div class='lang my-button-2 lang' data-key='READ_MORE' style="width: 120px;" onclick="window.open('https://github.com/Berglas/Crawler')"></div>
                         </div>
-                    </div>                    
+                    </div>
                     <div class="carousel-item">
-                        <div class="protfolio-img" style='background: url(image/mypackage.jpg)'></div>
+                        <div class="protfolio-img" style='background: url(image/mycodepen.png)'></div>
                         <div class="protfolio-info">
                             <h3 class='lang' data-key='PORTFOLIO_item_title_5'></h3>
                             <p class='lang' data-key='PORTFOLIO_item_description_5'></p>
-                            <a class='lang my-button-2 lang' data-key='READ_MORE' style="width: 100px;"></a>
+                            <div class='lang my-button-2 lang' data-key='READ_MORE' style="width: 120px;" onclick="window.open('https://codepen.io/berglas')"></div>
                         </div>
                     </div>
                 </div>
@@ -223,17 +218,15 @@
             <div>
                 <p class='lang' data-key='CONTACT_thx_info_content_1'></p>
                 <p class='lang' data-key='CONTACT_thx_info_content_2'></p>
+                <br>
                 <p class='lang' data-key='CONTACT_thx_info_signature'></p>
             </div>
             <div>
                 <a class="fa fa-envelope-o fa-3x" href="mailto:sasuke01260616@gmail.com"></a>
-                <!-- <br> -->
-                <a class="fa fa-codepen fa-3x" href="https://github.com/Berglas" target="_blank"></a>
-                <!-- <br> -->
                 <a class="fa fa-github fa-3x" href="https://github.com/Berglas" target="_blank"></a>
-                <!-- <br> -->
+                <a class="fa fa-codepen fa-3x" href="https://codepen.io/berglas" target="_blank"></a>
             </div>
-            <h2>Copyright © Kevin Lin 2018</h2>
+            <h3>Copyright © Kevin Lin 2018</h3>
         </div>
     </section>
 </body>
