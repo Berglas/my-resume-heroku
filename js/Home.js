@@ -37,9 +37,9 @@ $(window).scroll(function() {
     } else if ($(this).scrollTop() >= x1 * 0.8 && $(this).scrollTop() <= x2) {
         // console.log("page1");
         // $('#home_menu')[0].classList.add('hide-bg');
-        $('.profile-info>div')[0].classList.add('animation-text-show');
-        setTimeout(function() { $('.profile-about>div')[0].classList.add('animation-text-show'); }, 600);
-        setTimeout(function() { $('.profile-education>div')[0].classList.add('animation-text-show'); }, 1200);
+        $('.profile-info')[0].classList.add('animation-text-show');
+        setTimeout(function() { $('.profile-autobiography>div')[0].classList.add('animation-text-show'); }, 600);
+        setTimeout(function() { $('.profile-experience>div')[0].classList.add('animation-text-show'); }, 1200);
     } else if ($(this).scrollTop() >= x2 && $(this).scrollTop() <= x3) {
         // console.log("page2");
     }
@@ -49,6 +49,8 @@ $(window).scroll(function() {
 //設定錨點
 $(function() {
     $('a[href*=#]:not([href=#])').click(function() {
+        $(".menu-icon")[0].classList.remove("active");
+        $(".sliding-menu>nav")[0].classList.remove("active");
         if ($(this)[0].hash != "#protfolio_carousel") {
             var target = $(this.hash);
             $('html, body').animate({
@@ -131,4 +133,16 @@ $(function() {
         $(".menu-icon")[0].classList.toggle("active");
         $(".sliding-menu>nav")[0].classList.toggle("active");
     })
+});
+
+//初始化skill-bar
+$(function() {
+    $('.skill-bar').each(function(index, el) {
+        $(this).append("<div></div>");
+        var barColor = $(this)[0].getAttribute('data-color');
+        var barValue = $(this)[0].getAttribute('data-value');
+        $(this).find('div').css("background-color", barColor);       
+        $(this).find('div').css("width", barValue);
+        $(this).find('div').attr('content',barValue);
+    });
 });

@@ -23,20 +23,34 @@
     <div id='home_menu' class="sliding-menu ver2">
         <nav>
             <ul>
-                <li data-menuanchor="page1"><a class='lang' data-key="Itme_PROFILE" href="#page1"></a></li>
-                <li data-menuanchor="page2"><a class='lang' data-key="Itme_SKILLS" href="#page2"></a></li>
-                <li data-menuanchor="page3"><a class='lang' data-key="Itme_PORTFOLIO" href="#page3"></a></li>
-                <li data-menuanchor="page4"><a class='lang' data-key="Itme_CONTACT" href="#page4"></a></li>
+                <li data-menuanchor="page1">
+                    <a class='lang' data-key="Itme_PROFILE" href="#page1"></a>
+                    <p class='lang' data-key="Itme_PROFILE_1"></p>
+                    <p class='lang' data-key="Itme_PROFILE_2"></p>
+                    <p class='lang' data-key="Itme_PROFILE_3"></p>
+                </li>
+                <li data-menuanchor="page2"><a class='lang' data-key="Itme_SKILLS" href="#page2"></a>
+                    <p class='lang' data-key="Itme_SKILLS_1"></p>
+                    <p class='lang' data-key="Itme_SKILLS_2"></p>
+                    <p class='lang' data-key="Itme_SKILLS_3"></p>
+                </li>
+                <li data-menuanchor="page3"><a class='lang' data-key="Itme_PORTFOLIO" href="#page3"></a>
+                    <p class='lang' data-key="Itme_PORTFOLIO_1"></p>
+                    <p class='lang' data-key="Itme_PORTFOLIO_2"></p>
+                    <p class='lang' data-key="Itme_PORTFOLIO_3"></p>
+                    <p class='lang' data-key="Itme_PORTFOLIO_4"></p>
+                    <p class='lang' data-key="Itme_PORTFOLIO_5"></p>
+                </li>
+                <li data-menuanchor="page4"><a class='lang' data-key="Itme_CONTACT" href="#page4"></a>
+                    <p class='lang' data-key="Itme_CONTACT_1"></p>
+                </li>
             </ul>
             <div id='zh-tw' class='translate'>中</div>
             <div id='en' class='translate'>EN</div>
-            <div class="fa fa-home fa-2x"><a href="#page0"></a></div>
+            <div class="fa fa-home fa-4x"><a href="#page0"></a></div>
         </nav>
     </div>
     <section id='page0'>
-        <!-- <video autoplay loop>
-            <source src="image/coding.webm" type="video/webm">
-        </video> -->
         <div class='web-title'>
             <div class="has-animation animation" data-delay="100">
                 <h1>MY RESUME</h1>
@@ -56,34 +70,43 @@
         </div>
     </section>
     <section id='page1'>
+        <h1 class='profile-title lang' data-key="Itme_PROFILE"></h1>
         <div class="wave-box">
             <div class="wave"></div>
             <div class="wave"></div>
         </div>
         <div class='profile-info'>
-            <h1 class='title lang' data-key="Itme_PROFILE"></h1>
-            <div>
-                <div class='profile-photo'></div>
+            <div class='profile-photo'></div>
+            <div class='profile-about'>
                 <h2 class='lang' data-key="PROFILE_Hi"></h2>
-                <h3 class='lang' data-key="PROFILE_Saying"></h3>
-            </div>
-        </div>
-        <div class='profile-about'>
-            <div>
-                <h1 class='lang' data-key='PROFILE_About_title'></h1>
                 <p class='lang' data-key='PROFILE_AboutMe'></p>
             </div>
         </div>
-        <div class='profile-education'>
-            <div>               
-                <h2 class='lang' data-key="PROFILE_Education_title"></h2>
-                <p class='lang' data-key="PROFILE_Education1"></p>
-                <br>
+        <div class='profile-autobiography'>
+            <div>
+                <h1 class='lang' data-key='PROFILE_Autobiography_title'></h1>
+                <h3 class='lang' data-key='PROFILE_Autobiography_now_title'></h3>
+                <p class='lang' data-key='PROFILE_Autobiography_now_1'></p>
+                <p class='lang' data-key='PROFILE_Autobiography_now_2'></p>
+                <p class='lang' data-key='PROFILE_Autobiography_now_3'></p>
+                <h3 class='lang' data-key='PROFILE_Autobiography_future_title'></h3>
+                <p class='lang' data-key='PROFILE_Autobiography_future'></p>
+            </div>
+        </div>
+        <div class='profile-experience'>
+            <div>
+                <!-- <h2 class='lang' data-key="PROFILE_Education_title"></h2>
+                <p class='lang' data-key="PROFILE_Education1"></p> -->
                 <h2 class='lang' data-key="PROFILE_Experience_title"></h2>
-                <p class='lang' data-key='RESUME_Experience_1'></p>
-                <p class='lang' data-key='RESUME_Experience_2'></p>
-                <p class='lang' data-key='RESUME_Experience_3'></p>
-                <p class='lang' data-key='RESUME_Experience_4'></p>
+                <h3 class='lang' data-key='RESUME_Experience_1'></h3>
+                <p class='lang' data-key='RESUME_Experience_1_content'></p>
+                <h3 class='lang' data-key='RESUME_Experience_2'></h3>
+                <p class='lang' data-key='RESUME_Experience_2_content_1'></p>
+                <p class='lang' data-key='RESUME_Experience_2_content_2'></p>
+                <h3 class='lang' data-key='RESUME_Experience_3'></h3>
+                <h3 class='lang' data-key='RESUME_Experience_4'></h3>
+                <p class='lang' data-key='RESUME_Experience_4_content_1'></p>
+                <p class='lang' data-key='RESUME_Experience_4_content_2'></p>
             </div>
         </div>
     </section>
@@ -98,15 +121,30 @@
                     <div class='content-title lang' data-key='SKILLS_frontend'></div>
                     <div class='skill-img' style='background: url(image/front-end.jpg);'></div>
                     <div class='skill-content'>
-                        <p class='lang' data-key='SKILLS_frontend_content_1'></p>
-                        <p class='lang' data-key='SKILLS_frontend_content_2'></p>
-                        <br>
-                        <p class='lang' data-key='SKILLS_frontend_content_3'></p>
+                        <div class='skill-bar-box'>
+                            <div class="skill-bar" data-value='80%' data-color='#A174B4'>
+                                <p>HTML5</p>
+                            </div>
+                            <br>
+                            <div class="skill-bar" data-value='80%' data-color='#A174B4'>
+                                <p>CSS/LESS</p>
+                            </div>
+                            <br>
+                            <div class="skill-bar" data-value='80%' data-color='#A174B4'>
+                                <p>JavaScript/JQuery</p>
+                            </div>
+                            <br>
+                            <div class="skill-bar" data-value='50%' data-color='#A174B4'>
+                                <p>Vue.js</p>
+                            </div>
+                            <p class='lang' data-key='SKILLS_frontend_content_3'></p>
                         <p class='lang' data-key='SKILLS_frontend_content_4'></p>
                         <p class='lang' data-key='SKILLS_frontend_content_5'></p>
                         <p class='lang' data-key='SKILLS_frontend_content_6'></p>
                         <p class='lang' data-key='SKILLS_frontend_content_7'></p>
                         <div class="expanded-button skill-button lang" data-key='READ_MORE'></div>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -116,14 +154,21 @@
                     <div class='content-title lang' data-key='SKILLS_backend'></div>
                     <div class='skill-img' style='background: url(image/back-end.jpg);'></div>
                     <div class='skill-content'>
-                        <p class='lang' data-key='SKILLS_backend_content_1'></p>
-                        <p class='lang' data-key='SKILLS_backend_content_2'></p>
-                        <br>
-                        <p class='lang' data-key='SKILLS_backend_content_3'></p>
-                        <p class='lang' data-key='SKILLS_backend_content_4'></p>
-                        <p class='lang' data-key='SKILLS_backend_content_5'></p>
-                        <p class='lang' data-key='SKILLS_backend_content_6'></p>
-                        <div class="expanded-button skill-button lang" data-key='READ_MORE'></div>
+                        <div class='skill-bar-box'>
+                            <div class="skill-bar" data-value='75%' data-color='#A174B4'>
+                                <p>ASP.NET MVC(C#)</p>
+                            </div>
+                            <br>
+                            <div class="skill-bar" data-value='65%' data-color='#A174B4'>
+                                <p>Golang</p>
+                            </div>
+                            <br>
+                            <p class='lang' data-key='SKILLS_backend_content_3'></p>
+                            <p class='lang' data-key='SKILLS_backend_content_4'></p>
+                            <p class='lang' data-key='SKILLS_backend_content_5'></p>
+                            <p class='lang' data-key='SKILLS_backend_content_6'></p>
+                            <div class="expanded-button skill-button lang" data-key='READ_MORE'></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -133,14 +178,27 @@
                     <div class='content-title lang' data-key='SKILLS_others'></div>
                     <div class='skill-img' style='background: url(image/others.jpg);'></div>
                     <div class='skill-content'>
-                        <p class='lang' data-key='SKILLS_others_content_1'></p>
-                        <p class='lang' data-key='SKILLS_others_content_2'></p>
-                        <br>
-                        <p class='lang' data-key='SKILLS_others_content_3'></p>
-                        <p class='lang' data-key='SKILLS_others_content_4'></p>
-                        <p class='lang' data-key='SKILLS_others_content_5'></p>
-                        <p class='lang' data-key='SKILLS_others_content_6'></p>
-                        <div class="expanded-button skill-button lang" data-key='READ_MORE'></div>
+                        <div class='skill-bar-box'>
+                            <div class="skill-bar" data-value='80%' data-color='#A174B4'>
+                                <p>SVN</p>
+                            </div>
+                            <br>
+                            <div class="skill-bar" data-value='60%' data-color='#A174B4'>
+                                <p>Git</p>
+                            </div>
+                            <br>
+                            <div class="skill-bar" data-value='75%' data-color='#A174B4'>
+                                <p>SQL Server/Postgres/SQLite</p>
+                            </div>
+                            <p class='lang' data-key='SKILLS_others_content_1'></p>
+                            <p class='lang' data-key='SKILLS_others_content_2'></p>
+                            <br>
+                            <p class='lang' data-key='SKILLS_others_content_3'></p>
+                            <p class='lang' data-key='SKILLS_others_content_4'></p>
+                            <p class='lang' data-key='SKILLS_others_content_5'></p>
+                            <p class='lang' data-key='SKILLS_others_content_6'></p>
+                            <div class="expanded-button skill-button lang" data-key='READ_MORE'></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -247,7 +305,6 @@ $(document).ready(function() {
     $("#protfolio_carousel").swipeleft(function() {
         $(this).carousel('next');
     });
-
 });
 </script>
 

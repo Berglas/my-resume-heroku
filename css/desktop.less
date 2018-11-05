@@ -50,7 +50,7 @@ h3 {
     div {
         background-color: rgba(47, 51, 58, 0.2);
         position: absolute;
-        top: 20%;
+        top: 15%;
         left: 40%;
     }
 
@@ -97,41 +97,50 @@ h3 {
     }
 }
 
+.profile-title {
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    padding-left: 1%;
+    border-left: 8px solid @theme-color;
+}
+
 .profile-info {
     height: 100%;
     width: 30%;
     float: left;
-    padding: 3% 0% 0% 5%;
-
-    >div {
-        height: 85%;
-        width: 90%;
-        padding: 5%;
-        margin-top: 5%;
-        opacity: 0;
-    }
+    padding: 8% 0% 0% 5%;
 
     .profile-photo {
-        height: 50%;
-        width: 100%;
+        margin: auto;
+        height: 250px;
+        width: 250px;
         background-image: url(../image/my-photo.jpg);
         background-size: cover;
         border-radius: 100%;
         margin-bottom: 50px;
         .less-box-shadow(12px 8px 8px 1px rgba(47, 51, 58, 0.2));
     }
+
+    .profile-about {
+        height: 55%;
+        width: 100%;
+        padding: 5%;
+        margin-top: 5%;
+
+    }
 }
 
-.profile-about {
-    height: 40%;
+.profile-autobiography {
+    height: 50%;
     width: 70%;
     float: right;
-    padding: 3% 5% 0% 0%;
+    padding: 2% 3% 0% 0%;
 
     >div {
         height: 100%;
         width: 100%;
-        padding: 3%;
+        padding: 2%;
         .less-box-shadow(12px 8px 4px 1px rgba(47, 51, 58, 0.2));
         background: rgba(246, 249, 247, 0.8);
         opacity: 0;
@@ -139,24 +148,33 @@ h3 {
 
     h1 {
         font-size: 2em;
-        padding-bottom: 1em;
+    }
+
+    h3 {
+        position: relative;
+        font-size: 1.5em;
+        margin: 1.25em 0 0.5em 0;
+        font-weight: 800;
     }
 
     p {
         font-size: 1em;
+        margin: 0 0 1em 0;
+        line-height: 140%;
+        text-indent: 2em;
     }
 }
 
-.profile-education {
-    height: 60%;
+.profile-experience {
+    height: 50%;
     width: 70%;
     float: right;
-    padding: 1% 5% 5% 0%;
+    padding: 1% 3% 3% 0%;
 
     >div {
         height: 100%;
         width: 100%;
-        padding: 3%;
+        padding: 2%;
         .less-box-shadow(12px 8px 4px 1px rgba(47, 51, 58, 0.2));
         background: rgba(246, 249, 247, 0.8);
         opacity: 0;
@@ -167,8 +185,25 @@ h3 {
         border-left: 6px solid @theme-color;
     }
 
+    h3 {
+        position: relative;
+        font-size: 1.25em;
+        margin: 1.25em 0 0.25em 1.25em;
+    }
+
+    h3:after {
+        content: '•';
+        display: block;
+        position: absolute;
+        color: @theme-color;
+        top: 0;
+        left: -1em;
+    }
+
     p {
+        padding-left: 1.75em;
         font-size: 1em;
+        line-height: 140%;
     }
 }
 
@@ -181,7 +216,6 @@ h3 {
 }
 
 .wave {
-    // background: url(../image/wave.svg) repeat-x;
     background-image: url("data:image/svg+xml;charset=utf8,<svg xmlns='http://www.w3.org/2000/svg' width='1600' height='198'><defs><linearGradient id='a' x1='50%' x2='50%' y1='-10.959%' y2='100%'><stop stop-color='#66317C' stop-opacity='.25' offset='0%'/><stop stop-color='#66317C' offset='100%'/></linearGradient></defs><path fill='url(#a)' fill-rule='evenodd' d='M.005 121C311 121 409.898-.25 811 0c400 0 500 121 789 121v77H0s.005-48 .005-77z' transform='matrix(-1 0 0 1 1600 0)'/></svg>");
     background-repeat: repeat-x;
     position: absolute;
@@ -246,6 +280,7 @@ h3 {
 }
 
 .skill-button {
+    display: none;
     position: absolute;
     bottom: 8px;
     right: 8px;
@@ -273,9 +308,6 @@ h3 {
 
     p {
         font-size: 1em;
-        overflow: hidden;
-        white-space: nowrap;
-        text-overflow: ellipsis;
     }
 }
 
@@ -465,10 +497,6 @@ h3 {
     right: 2px;
 }
 
-.expanded-button {
-    display: block;
-}
-
 .is-expanded {
     .expanded-switch {
         display: block;
@@ -521,6 +549,15 @@ h3 {
 .expanded-content {
     height: 100%;
     color: #fff;
+
+    .skill-bar-box
+    {
+        position: relative;
+        top: 16%;
+        left: 0;
+        width: 100%;
+        height: 40%;
+    }
 }
 
 .protfolio-title {
@@ -623,7 +660,7 @@ h3 {
     width: 100%;
     height: 25%;
     padding: 0% 25% 0% 25%;
-    background: rgba(102, 49, 124, 0.2);
+    background: rgba(102, 49, 124, 0.1);
 
     h3 {
         width: 100%;

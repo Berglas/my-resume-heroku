@@ -87,33 +87,34 @@ h3 {
     }
 }
 
+.profile-title {
+    margin: 2% 0 0 5%;
+    border-left: 8px solid @theme-color;
+    padding-left: 1%;
+}
+
 .profile-info {
     height: 70vh;
     width: 100%;
 
-    >h1 {
-        margin: 3% 0% 0% 5%;
-    }
-
-    >div {
-        height: 100%;
-        width: 100%;
-        padding: 5%;
-        opacity: 0;
-        background: rgba(246, 249, 247, 0.8);
-    }
-
     .profile-photo {
-        height: 60%;
-        width: 80%;
+        margin: auto;
+        height: 250px;
+        width: 250px;
         background-image: url(../image/my-photo.jpg);
         background-size: cover;
         border-radius: 100%;
         margin-bottom: 50px;
     }
+
+    .profile-about {
+        height: 100%;
+        width: 100%;
+        padding: 5%;
+    }
 }
 
-.profile-about {
+.profile-autobiography {
     height: 40%;
     width: 100%;
 
@@ -121,21 +122,30 @@ h3 {
         height: 100%;
         width: 100%;
         padding: 5%;
-        background: rgba(246, 249, 247, 0.8);
+        background: rgba(102, 49, 124, 0.1);
         opacity: 0;
     }
 
     h1 {
         font-size: 2em;
-        padding-bottom: 1em;
+    }
+
+    h3 {
+        position: relative;
+        font-size: 1.5em;
+        margin: 0.75em 0 0.5em 0;
+        font-weight: 800;
     }
 
     p {
         font-size: 1em;
+        margin: 0 0 1em 0;
+        line-height: 140%;
+        text-indent: 2em;
     }
 }
 
-.profile-education {
+.profile-experience {
     height: 60%;
     width: 100%;
 
@@ -143,18 +153,35 @@ h3 {
         height: 100%;
         width: 100%;
         padding: 5%;
-        .less-box-shadow(12px 8px 4px 1px rgba(47, 51, 58, 0.2));
-        background: rgba(246, 249, 247, 0.8);
+        background: rgba(102, 49, 124, 0.1);
         opacity: 0;
     }
 
     h2 {
-        padding-left: 1%;
-        border-left: 4px solid @theme-color;
+        font-size: 1.5em;
+        margin: 1.25em 0 0.5em 0;
+        font-weight: 800;
+    }
+
+    h3 {
+        position: relative;
+        font-size: 1em;
+        margin: 1em 0 0.25em 1em;
+    }
+
+    h3:after {
+        content: '•';
+        display: block;
+        position: absolute;
+        color: @theme-color;
+        top: 0;
+        left: -1em;
     }
 
     p {
+        padding-left: 1.75em;
         font-size: 1em;
+        line-height: 140%;
     }
 }
 
@@ -370,7 +397,7 @@ h3 {
 .thx-box {
     width: 100%;
     height: 40vh;
-    background: rgba(102, 49, 124, 0.2);
+    background: rgba(102, 49, 124, 0.1);
 
     h3 {
         position: absolute;
