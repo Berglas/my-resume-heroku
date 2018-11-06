@@ -166,7 +166,6 @@ body {
     top: 0;
     z-index: 9999;
     animation: text-show-after 4s;
-    animation-fill-mode: forwards;
     height: 100%;
     .less-transform(45deg);
 }
@@ -174,10 +173,6 @@ body {
 @-webkit-keyframes text-show {
     0% {
         opacity: 0;
-    }
-
-    50% {
-        opacity: 0.9;
     }
 
     100% {
@@ -188,10 +183,6 @@ body {
 @keyframes text-show {
     0% {
         opacity: 0;
-    }
-
-    50% {
-        opacity: 0.9;
     }
 
     100% {
@@ -208,7 +199,7 @@ body {
 
     100% {
         left: 0%;
-        width: 2000%;
+        width: 1000%;
     }
 }
 
@@ -401,13 +392,12 @@ body {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 100%;
-    height: 20px;
+    height: 16px;
     border-radius: 5px;
     border: 1px dashed rgba(180, 180, 180, 1);
     background: rgba(235, 235, 235, 0.8);
     padding: 2px;
     position: relative;
-    margin: 4px;
 
     >p {
         position: absolute;
@@ -429,8 +419,8 @@ body {
     >div:after {
         content: attr(content);
         position: absolute;
-        top: 12px;
-        right: -24px;
+        top: -9px;
+        right: -32px;
         display: block;
         font-size: 1em;
     }

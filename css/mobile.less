@@ -10,17 +10,19 @@ section {
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 3em;
     line-height: 100%;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 h2 {
-    font-size: 16px;
+    font-size: 2em;
+    line-height: 100%;
 }
 
 h3 {
-    font-size: 12px;
+    font-size: 1em;
+    line-height: 100%;
 }
 
 .title {
@@ -94,17 +96,16 @@ h3 {
 }
 
 .profile-info {
-    height: 70vh;
+    height: 100vh;
     width: 100%;
 
     .profile-photo {
-        margin: auto;
         height: 250px;
         width: 250px;
         background-image: url(../image/my-photo.jpg);
         background-size: cover;
         border-radius: 100%;
-        margin-bottom: 50px;
+        margin: 50px auto;
     }
 
     .profile-about {
@@ -126,20 +127,20 @@ h3 {
         opacity: 0;
     }
 
-    h1 {
+    h2 {
         font-size: 2em;
     }
 
     h3 {
-        position: relative;
-        font-size: 1.5em;
-        margin: 0.75em 0 0.5em 0;
-        font-weight: 800;
+       position: relative;
+        font-size: 1.25em;
+        margin: 0.25em 0 0.25em 0;
+        font-weight: 600;
     }
 
     p {
         font-size: 1em;
-        margin: 0 0 1em 0;
+        margin: 0 0 0.5em 0;
         line-height: 140%;
         text-indent: 2em;
     }
@@ -158,15 +159,16 @@ h3 {
     }
 
     h2 {
-        font-size: 1.5em;
-        margin: 1.25em 0 0.5em 0;
-        font-weight: 800;
+        font-size: 2em;
+        font-weight: 600;
+
     }
 
     h3 {
         position: relative;
         font-size: 1em;
-        margin: 1em 0 0.25em 1em;
+        margin: 0.25em 0 0.25em 1em;
+        font-weight: 600;
     }
 
     h3:after {
@@ -185,6 +187,10 @@ h3 {
     }
 }
 
+.wave-box {
+    display: none;
+}
+
 .skill-title {
     height: 10%;
     width: 95%;
@@ -198,14 +204,14 @@ h3 {
 }
 
 .skill-img {
-    height: 40%;
+     height: 40%;
     width: 60%;
     position: absolute;
-    bottom: -15%;
-    left: -20%;
+    bottom: -20%;
+    right: -10%;
     background-size: 100% 100% !important;
     opacity: 0.8;
-    .less-transform(25deg);
+    .less-transform(-15deg);
     border-radius: 20%;
     filter: grayscale(50%);
 }
@@ -241,7 +247,7 @@ h3 {
 .content-title {
     position: absolute;
     top: 0px;
-    right: 0px;
+    left: 0px;
     color: #444;
     width: 100px;
     height: 100px;
@@ -250,9 +256,9 @@ h3 {
 }
 
 .content-title::after {
-    position: absolute;
-    top: -20px;
-    right: -20px;
+   position: absolute;
+    top: -45px;
+    left: -20px;
     display: block;
     content: '';
     height: 100%;
@@ -267,6 +273,7 @@ h3 {
     width: 100%;
     height: 100vh;
     position: relative;
+    overflow: hidden;
 }
 
 .expanded-box:nth-child(1) {
@@ -304,6 +311,13 @@ h3 {
 
 .expanded-content {
     height: 100%;
+
+    .skill-bar-box {
+        position: relative;
+        top: 20%;
+        left: 0;
+        width: 100%;
+    }
 }
 
 .protfolio-title {
