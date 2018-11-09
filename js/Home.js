@@ -28,20 +28,29 @@ function deleteCookie(name) {
 
 //滾動事件
 $(window).scroll(function() {
-    var x = $('#page0').offset().top;
-    var x1 = $('#page1').offset().top;
-    var x2 = $('#page2').offset().top;
-    var x3 = $('#page3').offset().top;
-    if ($(this).scrollTop() >= x && $(this).scrollTop() <= x1 * 0.8) {
+    var page0 = $('#page0').offset().top;
+    var page1 = $('#page1').offset().top;
+    var page2 = $('#page2').offset().top;
+    var page3 = $('#page3').offset().top;
+    var page3run = false;
+    if ($(this).scrollTop() >= page0 && $(this).scrollTop() <= page1 * 0.8) {
         // $('#home_menu')[0].classList.remove('show-bg');
-    } else if ($(this).scrollTop() >= x1 * 0.8 && $(this).scrollTop() <= x2) {
-        // console.log("page1");
-        // $('#home_menu')[0].classList.add('hide-bg');
+    } else if ($(this).scrollTop() >= page1 * 0.8 && $(this).scrollTop() <= page2 * 0.8) {
         $('.profile-info')[0].classList.add('animation-text-show');
         setTimeout(function() { $('.profile-autobiography>div')[0].classList.add('animation-text-show'); }, 600);
         setTimeout(function() { $('.profile-experience>div')[0].classList.add('animation-text-show'); }, 1200);
-    } else if ($(this).scrollTop() >= x2 && $(this).scrollTop() <= x3) {
-        // console.log("page2");
+    } else if ($(this).scrollTop() >= page2 * 0.8 && $(this).scrollTop() <= page3) {
+        if (!page3run) {
+            page3run = true;
+            $('.skill-bar').each(function(e) {
+                $(this).find('div')[0].classList.add('animate-bar-run');
+                var barColor = $(this)[0].getAttribute('data-color');
+                var barValue = $(this)[0].getAttribute('data-value');
+                $(this).find('div').css("background-color", barColor);
+                $(this).find('div').css("width", barValue);
+                $(this).find('div').attr('content', barValue);
+            });
+        }
     }
 
 });
@@ -139,10 +148,10 @@ $(function() {
 $(function() {
     $('.skill-bar').each(function(index, el) {
         $(this).append("<div></div>");
-        var barColor = $(this)[0].getAttribute('data-color');
-        var barValue = $(this)[0].getAttribute('data-value');
-        $(this).find('div').css("background-color", barColor);       
-        $(this).find('div').css("width", barValue);
-        $(this).find('div').attr('content',barValue);
+        // var barColor = $(this)[0].getAttribute('data-color');
+        // var barValue = $(this)[0].getAttribute('data-value');
+        // $(this).find('div').css("background-color", barColor);
+        // $(this).find('div').css("width", barValue);
+        // $(this).find('div').attr('content', barValue);
     });
 });
